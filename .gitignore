@@ -1,0 +1,9 @@
+node_modules/
+dist/
+Map/
+*.py
+*.log
+export_db.py
+tile_convert.py
+.DS_Store
+public/TileMap/

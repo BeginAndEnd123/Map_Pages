@@ -1,0 +1,512 @@
+{
+  "chapter0": {
+    "chapter_name": "序章",
+    "maps": [
+      {
+        "name": "鹦鹉螺式魔法船（第一层）",
+        "tile_url": "/TileMap/chapter0/鹦鹉螺式魔法船（第一层）/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "鹦鹉螺式魔法船（第二层）",
+        "tile_url": "/TileMap/chapter0/鹦鹉螺式魔法船（第二层）/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      }
+    ]
+  },
+  "chapter1": {
+    "chapter_name": "第1章",
+    "maps": [
+      {
+        "name": "低语深地",
+        "tile_url": "/TileMap/chapter1/低语深地/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "卧室",
+        "tile_url": "/TileMap/chapter1/卧室/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "地下通道",
+        "tile_url": "/TileMap/chapter1/地下通道/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "幽暗地域",
+        "tile_url": "/TileMap/chapter1/幽暗地域/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "幽暗地域的升降机",
+        "tile_url": "/TileMap/chapter1/幽暗地域的升降机/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "座狼兽栏",
+        "tile_url": "/TileMap/chapter1/座狼兽栏/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "德鲁伊内殿、仆役住处、闲庭图书馆",
+        "tile_url": "/TileMap/chapter1/德鲁伊内殿、仆役住处、闲庭图书馆/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "提夫林避难所",
+        "tile_url": "/TileMap/chapter1/提夫林避难所/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "散塔林会地下室（上层）",
+        "tile_url": "/TileMap/chapter1/散塔林会地下室（上层）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "散塔林会地下室（下层）",
+        "tile_url": "/TileMap/chapter1/散塔林会地下室（下层）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "散塔林会窝点",
+        "tile_url": "/TileMap/chapter1/散塔林会窝点/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "枭雄巢穴",
+        "tile_url": "/TileMap/chapter1/枭雄巢穴/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "溃烂洞穴",
+        "tile_url": "/TileMap/chapter1/溃烂洞穴/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "瘟疫村落中的木质活板门（地窖）",
+        "tile_url": "/TileMap/chapter1/瘟疫村落中的木质活板门（地窖）/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "破碎圣所",
+        "tile_url": "/TileMap/chapter1/破碎圣所/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "破碎圣所（上层）",
+        "tile_url": "/TileMap/chapter1/破碎圣所（上层）/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "破碎圣所（下层）",
+        "tile_url": "/TileMap/chapter1/破碎圣所（下层）/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "精金熔炉（上层）",
+        "tile_url": "/TileMap/chapter1/精金熔炉（上层）/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "精金熔炉（下层）",
+        "tile_url": "/TileMap/chapter1/精金熔炉（下层）/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "蔓生地道",
+        "tile_url": "/TileMap/chapter1/蔓生地道/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "被亵渎的神殿",
+        "tile_url": "/TileMap/chapter1/被亵渎的神殿/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "阴暗墓穴",
+        "tile_url": "/TileMap/chapter1/阴暗墓穴/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "隐蔽房间",
+        "tile_url": "/TileMap/chapter1/隐蔽房间/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "隐藏金库",
+        "tile_url": "/TileMap/chapter1/隐藏金库/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "鹦鹉螺坠毁区域",
+        "tile_url": "/TileMap/chapter1/鹦鹉螺坠毁区域/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      }
+    ]
+  },
+  "chapter2": {
+    "chapter_name": "第1.5章",
+    "maps": [
+      {
+        "name": "伊雷珂养育间",
+        "tile_url": "/TileMap/chapter2/伊雷珂养育间/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "伊雷珂养育间——隐蔽房间",
+        "tile_url": "/TileMap/chapter2/伊雷珂养育间——隐蔽房间/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "瑰晨修道院",
+        "tile_url": "/TileMap/chapter2/瑰晨修道院/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      }
+    ]
+  },
+  "chapter3": {
+    "chapter_name": "第2章",
+    "maps": [
+      {
+        "name": "停尸房",
+        "tile_url": "/TileMap/chapter3/停尸房/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "夺心魔殖民地",
+        "tile_url": "/TileMap/chapter3/夺心魔殖民地/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "幽影诅咒之地",
+        "tile_url": "/TileMap/chapter3/幽影诅咒之地/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "星界",
+        "tile_url": "/TileMap/chapter3/星界/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "暗夜之歌监狱",
+        "tile_url": "/TileMap/chapter3/暗夜之歌监狱/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "月出之塔监狱",
+        "tile_url": "/TileMap/chapter3/月出之塔监狱/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "泥瓦匠行会地窖",
+        "tile_url": "/TileMap/chapter3/泥瓦匠行会地窖/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "萨尔的试炼场",
+        "tile_url": "/TileMap/chapter3/萨尔的试炼场/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "萨尔的试炼场(F2)",
+        "tile_url": "/TileMap/chapter3/萨尔的试炼场(F2)/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "萨尔的试炼场（F1）",
+        "tile_url": "/TileMap/chapter3/萨尔的试炼场（F1）/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "陵墓",
+        "tile_url": "/TileMap/chapter3/陵墓/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "雷斯文征税所的地库（上层）",
+        "tile_url": "/TileMap/chapter3/雷斯文征税所的地库（上层）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "雷斯文征税所的地库（下层）",
+        "tile_url": "/TileMap/chapter3/雷斯文征税所的地库（下层）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      }
+    ]
+  },
+  "chapter4": {
+    "chapter_name": "第3章",
+    "maps": [
+      {
+        "name": "丹瑟隆的飞斧",
+        "tile_url": "/TileMap/chapter4/丹瑟隆的飞斧/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "丹瑟隆的飞斧（地下室——上层）",
+        "tile_url": "/TileMap/chapter4/丹瑟隆的飞斧（地下室——上层）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "丹瑟隆的飞斧（地下室）",
+        "tile_url": "/TileMap/chapter4/丹瑟隆的飞斧（地下室）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "利文顿综合商店",
+        "tile_url": "/TileMap/chapter4/利文顿综合商店/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "利文顿综合商店（二楼）",
+        "tile_url": "/TileMap/chapter4/利文顿综合商店（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "剑湾快递",
+        "tile_url": "/TileMap/chapter4/剑湾快递/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "剑湾快递（二楼）",
+        "tile_url": "/TileMap/chapter4/剑湾快递（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "博德之口地下室",
+        "tile_url": "/TileMap/chapter4/博德之口地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "博德之口（负一层）",
+        "tile_url": "/TileMap/chapter4/博德之口（负一层）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "夏芮丝的爱抚",
+        "tile_url": "/TileMap/chapter4/夏芮丝的爱抚/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "夏芮丝的爱抚（一楼）",
+        "tile_url": "/TileMap/chapter4/夏芮丝的爱抚（一楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "夏芮丝的爱抚（三楼）",
+        "tile_url": "/TileMap/chapter4/夏芮丝的爱抚（三楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "夏芮丝的爱抚（二楼）",
+        "tile_url": "/TileMap/chapter4/夏芮丝的爱抚（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "夏芮丝的爱抚（地下室）",
+        "tile_url": "/TileMap/chapter4/夏芮丝的爱抚（地下室）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "小卡行装",
+        "tile_url": "/TileMap/chapter4/小卡行装/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "小卡行装（二楼）",
+        "tile_url": "/TileMap/chapter4/小卡行装（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "山坡区监狱",
+        "tile_url": "/TileMap/chapter4/山坡区监狱/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "巫术杂物店地窖",
+        "tile_url": "/TileMap/chapter4/巫术杂物店地窖/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "废弃的海边小屋地下室",
+        "tile_url": "/TileMap/chapter4/废弃的海边小屋地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "弗雷戈招待所",
+        "tile_url": "/TileMap/chapter4/弗雷戈招待所/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "弗雷戈招待所（三楼）",
+        "tile_url": "/TileMap/chapter4/弗雷戈招待所（三楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "弗雷戈招待所（二楼）",
+        "tile_url": "/TileMap/chapter4/弗雷戈招待所（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "强制征用的谷仓",
+        "tile_url": "/TileMap/chapter4/强制征用的谷仓/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "慈爱神殿",
+        "tile_url": "/TileMap/chapter4/慈爱神殿/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "慈爱神殿的地窖",
+        "tile_url": "/TileMap/chapter4/慈爱神殿的地窖/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      },
+      {
+        "name": "拉玛吉斯高塔",
+        "tile_url": "/TileMap/chapter4/拉玛吉斯高塔/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "拉玛吉斯高塔(负一层)",
+        "tile_url": "/TileMap/chapter4/拉玛吉斯高塔(负一层)/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "梨木的地下室",
+        "tile_url": "/TileMap/chapter4/梨木的地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "烟火地下室",
+        "tile_url": "/TileMap/chapter4/烟火地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "盾牌骑士藏身点",
+        "tile_url": "/TileMap/chapter4/盾牌骑士藏身点/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "石化蜥蜴之门营房",
+        "tile_url": "/TileMap/chapter4/石化蜥蜴之门营房/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "石化蜥蜴之门营房（二楼）",
+        "tile_url": "/TileMap/chapter4/石化蜥蜴之门营房（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "磨坊地下室",
+        "tile_url": "/TileMap/chapter4/磨坊地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "精灵之歌酒馆",
+        "tile_url": "/TileMap/chapter4/精灵之歌酒馆/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "精灵之歌酒馆地下室",
+        "tile_url": "/TileMap/chapter4/精灵之歌酒馆地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "精灵之歌酒馆（二楼营地）",
+        "tile_url": "/TileMap/chapter4/精灵之歌酒馆（二楼营地）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "精灵之歌酒馆（二楼）",
+        "tile_url": "/TileMap/chapter4/精灵之歌酒馆（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "药水店",
+        "tile_url": "/TileMap/chapter4/药水店/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "菲尔格雷弗宅邸",
+        "tile_url": "/TileMap/chapter4/菲尔格雷弗宅邸/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "菲尔格雷弗宅邸地下室",
+        "tile_url": "/TileMap/chapter4/菲尔格雷弗宅邸地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "藏匿通道",
+        "tile_url": "/TileMap/chapter4/藏匿通道/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "角铁地窖",
+        "tile_url": "/TileMap/chapter4/角铁地窖/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "诺泰尔旅社",
+        "tile_url": "/TileMap/chapter4/诺泰尔旅社/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "诺泰尔旅社（二楼）",
+        "tile_url": "/TileMap/chapter4/诺泰尔旅社（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "费洛杰尔烟花铺",
+        "tile_url": "/TileMap/chapter4/费洛杰尔烟花铺/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "费洛杰尔烟花铺（三楼）",
+        "tile_url": "/TileMap/chapter4/费洛杰尔烟花铺（三楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "费洛杰尔烟花铺（二楼）",
+        "tile_url": "/TileMap/chapter4/费洛杰尔烟花铺（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "阿尔费宅邸（二楼）",
+        "tile_url": "/TileMap/chapter4/阿尔费宅邸（二楼）/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "阿尔费的地下室",
+        "tile_url": "/TileMap/chapter4/阿尔费的地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 3
+      },
+      {
+        "name": "风暴海岸圣所",
+        "tile_url": "/TileMap/chapter4/风暴海岸圣所/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "风暴海岸礼拜堂地下室",
+        "tile_url": "/TileMap/chapter4/风暴海岸礼拜堂地下室/{z}/{y}/{x}.webp",
+        "max_zoom": 2
+      },
+      {
+        "name": "飞龙关",
+        "tile_url": "/TileMap/chapter4/飞龙关/{z}/{y}/{x}.webp",
+        "max_zoom": 6
+      },
+      {
+        "name": "飞龙岩监狱",
+        "tile_url": "/TileMap/chapter4/飞龙岩监狱/{z}/{y}/{x}.webp",
+        "max_zoom": 4
+      },
+      {
+        "name": "飞龙岩瞭望台",
+        "tile_url": "/TileMap/chapter4/飞龙岩瞭望台/{z}/{y}/{x}.webp",
+        "max_zoom": 5
+      }
+    ]
+  }
+}
