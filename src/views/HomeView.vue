@@ -129,7 +129,6 @@
         <button v-if="selectedCategoryName === '传送点' && selectedMarker?.target_region_id"
           class="action-btn teleport" @click="onTeleportFromPopup(selectedMarker)">传送</button>
         <button class="action-btn edit" @click="onEdit(selectedMarker)">编辑</button>
-        <button class="action-btn delete" @click="onDelete(selectedMarker.id)">删除</button>
       </template>
     </MarkerPopup>
 
@@ -308,14 +307,6 @@ function onFormClose() {
 function onEdit(marker) {
   form.onEditMarker(marker)
   selectedMarker.value = null
-}
-
-async function onDelete(id) {
-  const ok = await form.onDeleteMarker(id)
-  if (ok) {
-    selectedMarker.value = null
-    await recent.fetchRecentMarkers()
-  }
 }
 
 function onExportMarkers() {
