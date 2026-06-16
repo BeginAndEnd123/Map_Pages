@@ -80,6 +80,8 @@
       <button class="add-btn" @click="onStartAdd">
         {{ isAdmin ? '新增标记' : '管理员登录后可添加' }}
       </button>
+
+      <button v-if="isAdmin" class="export-btn" @click="onExportMarkers">导出本地标记</button>
     </SidePanel>
 
     <CategoryManager
@@ -144,6 +146,7 @@ import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useMapStore } from '../stores/map'
 import { useAuthStore } from '../stores/auth'
 import { useUiStore } from '../stores/ui'
+import { getLocalMarkersForExport } from '../data/loader'
 import SidePanel from '../components/SidePanel.vue'
 import MapContainer from '../components/MapContainer.vue'
 import MarkerPopup from '../components/MarkerPopup.vue'
@@ -313,6 +316,22 @@ async function onDelete(id) {
     selectedMarker.value = null
     await recent.fetchRecentMarkers()
   }
+}
+
+function onExportMarkers() {
+  const markers = getLocalMarkersForExport()
+  if (markers.length === 0) {
+    alert('没有可导出的本地标记')
+    return
+  }
+  const json = JSON.stringify(markers, null, 2)
+  const blob = new Blob([json], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `bg3_local_markers_${new Date().toISOString().slice(0, 10)}.json`
+  a.click()
+  URL.revokeObjectURL(url)
 }
 
 async function onRegionChange() {
@@ -496,6 +515,15 @@ onBeforeUnmount(() => {
   cursor: pointer; transition: all var(--transition);
 }
 .add-btn:hover { background: var(--gold); color: var(--bg-deep); border-color: var(--gold); }
+
+.export-btn {
+  width: 100%; margin-top: 8px; padding: 7px 12px;
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: transparent; color: var(--text-secondary);
+  font-family: var(--font-body); font-size: 12px;
+  cursor: pointer; transition: all var(--transition);
+}
+.export-btn:hover { border-color: var(--gold); color: var(--gold); }
 
 .map-wrapper { flex: 1; position: relative; background: #000; }
 

@@ -256,6 +256,13 @@ function localDeleteMarker(id) {
   _markersCache = null
 }
 
+function getLocalMarkersForExport() {
+  const local = readLocal(STORAGE_KEYS.markers) || []
+  return local
+    .filter(m => !m._deleted)
+    .map(({ _deleted, ...rest }) => ({ ...rest, status: 'approved' }))
+}
+
 export {
   loadRegions,
   loadCategories,
@@ -277,5 +284,6 @@ export {
   localAddMarker,
   localUpdateMarker,
   localDeleteMarker,
+  getLocalMarkersForExport,
   STORAGE_KEYS,
 }
