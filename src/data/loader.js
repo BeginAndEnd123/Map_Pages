@@ -88,7 +88,7 @@ function mergeArrays(jsonArr, localArr, idKey) {
   })
 
   localArr.forEach(item => {
-    if (!item._deleted) {
+    if (!item._deleted && !deleted.has(item[idKey])) {
       map[item[idKey]] = item
     }
   })
@@ -179,8 +179,9 @@ function localUpdateRegion(id, data) {
 
 function localDeleteRegion(id) {
   const local = readLocal(STORAGE_KEYS.regions) || []
-  local.push({ id, _deleted: true })
-  writeLocal(STORAGE_KEYS.regions, local)
+  const cleaned = local.filter(r => r.id !== id)
+  cleaned.push({ id, _deleted: true })
+  writeLocal(STORAGE_KEYS.regions, cleaned)
   _regionsCache = null
 }
 
@@ -211,8 +212,9 @@ function localUpdateCategory(id, data) {
 
 function localDeleteCategory(id) {
   const local = readLocal(STORAGE_KEYS.categories) || []
-  local.push({ id, _deleted: true })
-  writeLocal(STORAGE_KEYS.categories, local)
+  const cleaned = local.filter(c => c.id !== id)
+  cleaned.push({ id, _deleted: true })
+  writeLocal(STORAGE_KEYS.categories, cleaned)
   _categoriesCache = null
 }
 
@@ -248,8 +250,9 @@ function localUpdateMarker(id, data) {
 
 function localDeleteMarker(id) {
   const local = readLocal(STORAGE_KEYS.markers) || []
-  local.push({ id, _deleted: true })
-  writeLocal(STORAGE_KEYS.markers, local)
+  const cleaned = local.filter(m => m.id !== id)
+  cleaned.push({ id, _deleted: true })
+  writeLocal(STORAGE_KEYS.markers, cleaned)
   _markersCache = null
 }
 
