@@ -77,20 +77,30 @@ async function loadMapsIndex() {
 
 function mergeArrays(jsonArr, localArr, idKey) {
   const map = {}
-  // 只对 localStorage 中存在的标记应用删除逻辑，不影响纯 JSON 标记
+  const localById = {}
   const deleted = new Set()
+
   localArr.forEach(item => {
-    if (item._deleted) deleted.add(item[idKey])
-  })
-  jsonArr.forEach(item => {
-    // JSON 标记永远不被 localStorage _deleted 影响
-    map[item[idKey]] = item
-  })
-  localArr.forEach(item => {
-    if (!item._deleted && !deleted.has(item[idKey])) {
-      map[item[idKey]] = item
+    const id = item[idKey]
+    if (item._deleted) {
+      deleted.add(id)
+    } else {
+      localById[id] = item
     }
   })
+
+  jsonArr.forEach(item => {
+    const id = item[idKey]
+    // 仅当该ID在localStorage中有原始记录且被标记删除时才跳过JSON标记
+    // 纯_删除标记（无原项）不会影响JSON标记
+    if (deleted.has(id) && localById[id]) return
+    map[id] = item
+  })
+
+  Object.values(localById).forEach(item => {
+    map[item[idKey]] = item
+  })
+
   return Object.values(map)
 }
 
