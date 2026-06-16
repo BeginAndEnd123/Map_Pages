@@ -252,14 +252,22 @@ function localDeleteMarker(id) {
   const local = readLocal(STORAGE_KEYS.markers) || []
   const cleaned = local.filter(m => m.id !== id)
   cleaned.push({ id, _deleted: true })
-  writeLocal(STORAGE_KEYS.markers, cleaned)
+  // 清理旧版残留：如有多个 _deleted 标记则去重
+  const deduped = []
+  const seen = new Set()
+  for (const m of cleaned) {
+    const key = m.id + '_' + (m._deleted ? 'D' : 'K')
+    if (!seen.has(key)) { seen.add(key); deduped.push(m) }
+  }
+  writeLocal(STORAGE_KEYS.markers, deduped)
   _markersCache = null
 }
 
 function getLocalMarkersForExport() {
   const local = readLocal(STORAGE_KEYS.markers) || []
+  const deletedIds = new Set(local.filter(m => m._deleted).map(m => m.id))
   return local
-    .filter(m => !m._deleted)
+    .filter(m => !m._deleted && !deletedIds.has(m.id))
     .map(({ _deleted, ...rest }) => ({ ...rest, status: 'approved' }))
 }
 
