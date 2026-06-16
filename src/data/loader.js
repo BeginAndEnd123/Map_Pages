@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 静态数据加载 + localStorage 合并引擎
  *
  * JSON 是预置种子数据，localStorage 存储管理员本地修改。
@@ -6,6 +6,7 @@
  */
 const CHAPTER_KEYS = ['chapter0', 'chapter1', 'chapter2', 'chapter3', 'chapter4']
 const CHAPTER_NAMES = { chapter0: '序章', chapter1: '第1章', chapter2: '第1.5章', chapter3: '第2章', chapter4: '第3章' }
+const BASE = import.meta.env.BASE_URL
 
 const STORAGE_KEYS = {
   regions: 'bg3_local_regions',
@@ -39,7 +40,7 @@ async function fetchJSON(path) {
 
 async function loadRegions() {
   if (_regionsCache) return [..._regionsCache]
-  const json = await fetchJSON('/data/regions.json')
+  const json = await fetchJSON(BASE + 'data/regions.json')
   const local = readLocal(STORAGE_KEYS.regions) || []
   const merged = mergeArrays(json, local, 'id')
   _regionsCache = merged
@@ -48,16 +49,20 @@ async function loadRegions() {
 
 async function loadCategories() {
   if (_categoriesCache) return [..._categoriesCache]
-  const json = await fetchJSON('/data/categories.json')
+  const json = await fetchJSON(BASE + 'data/categories.json')
+  const fixed = json.map(c => ({
+    ...c,
+    icon: c.icon && c.icon.startsWith('/icons/') ? BASE + c.icon.slice(1) : c.icon
+  }))
   const local = readLocal(STORAGE_KEYS.categories) || []
-  const merged = mergeArrays(json, local, 'id')
+  const merged = mergeArrays(fixed, local, 'id')
   _categoriesCache = merged
   return [...merged]
 }
 
 async function loadMarkers() {
   if (_markersCache) return [..._markersCache]
-  const json = await fetchJSON('/data/markers.json')
+  const json = await fetchJSON(BASE + 'data/markers.json')
   const local = readLocal(STORAGE_KEYS.markers) || []
   const merged = mergeArrays(json, local, 'id')
   _markersCache = merged
@@ -66,7 +71,7 @@ async function loadMarkers() {
 
 async function loadMapsIndex() {
   if (_mapsIndexCache) return _mapsIndexCache
-  _mapsIndexCache = await fetchJSON('/data/maps_index.json')
+  _mapsIndexCache = await fetchJSON(BASE + 'data/maps_index.json')
   return _mapsIndexCache
 }
 
@@ -101,7 +106,11 @@ function getChapterName(chapterKey) {
 
 function getMapsForChapter(chapterKey, mapsIndex) {
   if (!mapsIndex || !mapsIndex[chapterKey]) return []
-  return mapsIndex[chapterKey].maps || []
+  const maps = mapsIndex[chapterKey].maps || []
+  return maps.map(m => ({
+    ...m,
+    tile_url: m.tile_url ? m.tile_url.replace(/^\/TileMap\//, BASE + 'TileMap/') : m.tile_url
+  }))
 }
 
 // ── 管理员认证 ──
