@@ -128,7 +128,6 @@
       <template #actions v-if="isAdmin">
         <button v-if="selectedCategoryName === '传送点' && selectedMarker?.target_region_id"
           class="action-btn teleport" @click="onTeleportFromPopup(selectedMarker)">传送</button>
-        <button class="action-btn edit" @click="onEdit(selectedMarker)">编辑</button>
       </template>
     </MarkerPopup>
 
@@ -302,11 +301,6 @@ async function onFormSubmit(data) {
 function onFormClose() {
   form.closeForm()
   pick.reset()
-}
-
-function onEdit(marker) {
-  form.onEditMarker(marker)
-  selectedMarker.value = null
 }
 
 function onExportMarkers() {
