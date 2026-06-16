@@ -1,6 +1,6 @@
 <template>
   <div class="map-page">
-    <SidePanel>
+    <SidePanel :model-value="sidebarOpen">
       <h2>博德之门3 地图</h2>
 
       <div class="region-select">
@@ -116,6 +116,8 @@
       </div>
     </div>
 
+    <div class="sidebar-backdrop" v-if="sidebarOpen" @click="uiStore.closeSidebar()"></div>
+
     <MarkerPopup v-if="selectedMarker" :marker="selectedMarker"
       :category-name="selectedCategoryName"
       :transparent="!!hoverPreviewMarker"
@@ -141,6 +143,7 @@
 import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useMapStore } from '../stores/map'
 import { useAuthStore } from '../stores/auth'
+import { useUiStore } from '../stores/ui'
 import SidePanel from '../components/SidePanel.vue'
 import MapContainer from '../components/MapContainer.vue'
 import MarkerPopup from '../components/MarkerPopup.vue'
@@ -155,9 +158,11 @@ import { useMarkerForm } from '../composables/useMarkerForm'
 
 const mapStore = useMapStore()
 const authStore = useAuthStore()
+const uiStore = useUiStore()
 const mapRef = ref(null)
 const selectedMarker = ref(null)
 const selectedCategoryIds = ref([])
+const sidebarOpen = computed(() => uiStore.sidebarOpen)
 
 watch(() => mapStore.categories, (cats) => {
   if (cats.length > 0 && selectedCategoryIds.value.length === 0) {
@@ -526,4 +531,15 @@ onBeforeUnmount(() => {
   transition: background var(--transition);
 }
 .confirm-btn:hover { background: var(--gold-light); }
+
+.sidebar-backdrop {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sidebar-backdrop {
+    display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 350;
+  }
+  .pick-hint { font-size: 12px; padding: 6px 16px; }
+  .confirm-btn { font-size: 13px; padding: 8px 24px; }
+}
 </style>

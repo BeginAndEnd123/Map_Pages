@@ -163,4 +163,10 @@ onBeforeUnmount(() => {
 .action-bar :deep(.action-btn.delete):hover { background: var(--danger-hover); }
 .action-bar :deep(.action-btn.teleport) { background: var(--magic, #8b67c0); color: #fff; }
 .action-bar :deep(.action-btn.teleport):hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .marker-card { max-width: 100%; width: 100%; border-radius: 0; padding: 16px; }
+  .marker-card h3 { font-size: 15px; }
+  .screenshot { width: 100% !important; height: 120px; }
+}
 </style>

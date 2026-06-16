@@ -226,4 +226,10 @@ label textarea { resize: vertical; }
 .btn-submit { background: var(--gold); color: var(--bg-deep); font-weight: 600; }
 .btn-submit:hover { background: var(--gold-light); }
 .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+@media (max-width: 768px) {
+  .form-card { width: 100%; max-width: 100%; max-height: 100vh; border-radius: 0; padding: 20px; }
+  .form-actions { flex-direction: column; }
+  .btn-cancel, .btn-submit { width: 100%; text-align: center; }
+}
 </style>

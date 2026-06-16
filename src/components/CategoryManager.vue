@@ -266,4 +266,10 @@ onBeforeUnmount(() => {
 }
 .btn-cancel-edit:hover { border-color: var(--text-secondary); color: var(--text-primary); }
 .empty { font-size: 13px; color: var(--text-muted); text-align: center; padding: 16px 0; }
+
+@media (max-width: 768px) {
+  .card { width: 100%; max-width: 100%; max-height: 100vh; border-radius: 0; }
+  .add-form { padding: 10px 16px; }
+  .cat-list { padding: 8px 16px 16px 16px; }
+}
 </style>
