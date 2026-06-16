@@ -1,5 +1,5 @@
 /**
- * Vite 构建配置 — GitHub Pages 静态部署
+ * Vite 构建配置 — GitHub Pages 静态部署 (单分支 docs/)
  */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -7,6 +7,10 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   base: '/Map_Pages/',
   plugins: [vue()],
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
   server: {
     port: 5173,
   },

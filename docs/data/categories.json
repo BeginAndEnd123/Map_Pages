@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "传送点",
+    "icon": "/icons/waypoint.svg",
+    "sort_order": 0
+  },
+  {
+    "id": 2,
+    "name": "怪物",
+    "icon": "/icons/monster.svg",
+    "sort_order": 1
+  },
+  {
+    "id": 3,
+    "name": "道具",
+    "icon": "/icons/item.svg",
+    "sort_order": 2
+  },
+  {
+    "id": 4,
+    "name": "商人",
+    "icon": "/icons/merchant.svg",
+    "sort_order": 3
+  }
+]
