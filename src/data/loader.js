@@ -127,7 +127,7 @@ async function adminLogin(password) {
   const hash = await sha256(password)
   if (hash === ADMIN_PASSWORD_HASH) {
     writeLocal(STORAGE_KEYS.admin, 'true')
-    writeLocal(STORAGE_KEYS.adminUser, JSON.stringify({ username: 'admin', is_admin: true }))
+    writeLocal(STORAGE_KEYS.adminUser, { username: 'admin', is_admin: true })
     return true
   }
   return false
