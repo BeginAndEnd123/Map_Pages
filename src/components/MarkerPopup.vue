@@ -48,7 +48,15 @@ const props = defineProps({
 const emit = defineEmits(['close'])
 
 const enlarged = ref(null)
-const images = computed(() => props.marker?.images || [])
+const images = computed(() => {
+  if (props.marker?.images && Array.isArray(props.marker.images) && props.marker.images.length > 0)
+    return props.marker.images
+  if (props.marker?.screenshot) {
+    if (Array.isArray(props.marker.screenshot)) return props.marker.screenshot
+    try { const p = JSON.parse(props.marker.screenshot); return Array.isArray(p) ? p : [] } catch { return [] }
+  }
+  return []
+})
 
 const isGenericWaypoint = computed(() => {
   return props.categoryName === '传送点' && !props.marker?.target_region_id

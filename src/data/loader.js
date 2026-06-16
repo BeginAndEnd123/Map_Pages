@@ -276,7 +276,13 @@ function getLocalMarkersForExport() {
   const deletedIds = new Set(local.filter(m => m._deleted).map(m => m.id))
   return local
     .filter(m => !m._deleted && !deletedIds.has(m.id))
-    .map(({ _deleted, ...rest }) => ({ ...rest, status: 'approved' }))
+    .map(({ _deleted, images, screenshot, ...rest }) => ({
+      ...rest,
+      status: 'approved',
+      // 只保留路径引用，剔除 base64 图片数据
+      images: Array.isArray(images) ? images.filter(u => !String(u).startsWith('data:')) : [],
+      screenshot: Array.isArray(screenshot) ? screenshot.filter(u => !String(u).startsWith('data:')) : []
+    }))
 }
 
 export {

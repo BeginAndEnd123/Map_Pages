@@ -7,7 +7,7 @@
     "description": "",
     "x_coord": -69.87,
     "y_coord": 182.31,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-03T10:19:57",
     "map_name": "飞龙关",
     "target_region_id": null,
@@ -15,7 +15,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 20,
@@ -25,7 +26,7 @@
     "description": "",
     "x_coord": -132.48,
     "y_coord": 112.16,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-03T14:52:10",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": 2,
@@ -33,7 +34,8 @@
     "target_x": -140.25,
     "target_y": 62.8,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 21,
@@ -43,7 +45,7 @@
     "description": "挑战等级：8\n掉落：巨阙",
     "x_coord": -141.03,
     "y_coord": 143.69,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-03T15:50:06",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -51,7 +53,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 22,
@@ -61,7 +64,7 @@
     "description": "",
     "x_coord": -167.34,
     "y_coord": 150.2,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-03T15:50:47",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -69,7 +72,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 23,
@@ -79,7 +83,7 @@
     "description": "",
     "x_coord": -150.75,
     "y_coord": 170.81,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-03T15:52:55",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -87,7 +91,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 24,
@@ -97,7 +102,7 @@
     "description": "",
     "x_coord": -157.78,
     "y_coord": 107.86,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-03T15:59:24",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -105,7 +110,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 25,
@@ -115,7 +121,7 @@
     "description": "",
     "x_coord": -203.88,
     "y_coord": 87.19,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T09:16:23",
     "map_name": "被亵渎的神殿",
     "target_region_id": null,
@@ -123,7 +129,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 26,
@@ -133,7 +140,7 @@
     "description": "",
     "x_coord": -141.33,
     "y_coord": 125.19,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T09:54:27",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -141,7 +148,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 27,
@@ -151,7 +159,7 @@
     "description": "",
     "x_coord": -135.71,
     "y_coord": 134.02,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T10:08:42",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -159,7 +167,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 28,
@@ -169,7 +178,7 @@
     "description": "",
     "x_coord": -109.5,
     "y_coord": 108.55,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T10:09:11",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -177,7 +186,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 29,
@@ -187,7 +197,7 @@
     "description": "",
     "x_coord": -96.13,
     "y_coord": 132.17,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T10:09:49",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -195,7 +205,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 30,
@@ -205,7 +216,7 @@
     "description": "",
     "x_coord": -89.58,
     "y_coord": 115.02,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T10:10:18",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -213,7 +224,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 31,
@@ -223,7 +235,7 @@
     "description": "",
     "x_coord": -152.91,
     "y_coord": 102.24,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T10:10:39",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -231,7 +243,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 33,
@@ -241,7 +254,7 @@
     "description": "",
     "x_coord": -145.13,
     "y_coord": 171.16,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T14:04:43",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -249,7 +262,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 34,
@@ -259,7 +273,7 @@
     "description": "",
     "x_coord": -167.85,
     "y_coord": 102.16,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T14:05:17",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -267,7 +281,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 35,
@@ -277,7 +292,7 @@
     "description": "",
     "x_coord": -61.38,
     "y_coord": 121.0,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T14:56:50",
     "map_name": "飞龙关",
     "target_region_id": null,
@@ -285,7 +300,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 36,
@@ -295,7 +311,7 @@
     "description": "",
     "x_coord": -113.7,
     "y_coord": 184.14,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T14:57:11",
     "map_name": "飞龙关",
     "target_region_id": null,
@@ -303,7 +319,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 37,
@@ -313,7 +330,7 @@
     "description": "",
     "x_coord": -148.72,
     "y_coord": 194.41,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-04T14:57:29",
     "map_name": "飞龙关",
     "target_region_id": null,
@@ -321,7 +338,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 38,
@@ -331,7 +349,7 @@
     "description": "",
     "x_coord": -49.25,
     "y_coord": 212.19,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-05T02:54:09",
     "map_name": "幽影诅咒之地",
     "target_region_id": null,
@@ -339,7 +357,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 39,
@@ -349,7 +368,7 @@
     "description": "",
     "x_coord": -34.16,
     "y_coord": 144.88,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-05T02:54:37",
     "map_name": "幽影诅咒之地",
     "target_region_id": null,
@@ -357,7 +376,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 40,
@@ -367,7 +387,7 @@
     "description": "",
     "x_coord": -208.39,
     "y_coord": 130.89,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-05T05:57:17",
     "map_name": "幽影诅咒之地",
     "target_region_id": null,
@@ -375,7 +395,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 41,
@@ -385,7 +406,7 @@
     "description": "",
     "x_coord": -73.63,
     "y_coord": 93.6,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-05T06:24:20",
     "map_name": "幽影诅咒之地",
     "target_region_id": null,
@@ -393,7 +414,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 42,
@@ -403,7 +425,7 @@
     "description": "",
     "x_coord": -116.44,
     "y_coord": 108.25,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-05T06:26:21",
     "map_name": "停尸房",
     "target_region_id": null,
@@ -411,7 +433,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 51,
@@ -421,7 +444,7 @@
     "description": "",
     "x_coord": -140.25,
     "y_coord": 62.8,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-08T06:43:04",
     "map_name": "低语深地",
     "target_region_id": null,
@@ -429,7 +452,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 52,
@@ -439,7 +463,7 @@
     "description": "",
     "x_coord": -115.63,
     "y_coord": 81.24,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-08T06:49:10",
     "map_name": "低语深地",
     "target_region_id": null,
@@ -447,7 +471,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 63,
@@ -457,7 +482,7 @@
     "description": "",
     "x_coord": -125.28,
     "y_coord": 87.19,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-08T10:14:37",
     "map_name": "鹦鹉螺式魔法船（第二层）",
     "target_region_id": null,
@@ -465,7 +490,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "id": 225,
@@ -475,7 +501,7 @@
     "description": "掉落：肿瘤增生 高塔奥秘",
     "x_coord": -166.48,
     "y_coord": 139.75,
-    "screenshot": "[]",
+    "screenshot": [],
     "created_at": "2026-06-15T07:38:19",
     "map_name": "幽暗地域",
     "target_region_id": null,
@@ -483,7 +509,8 @@
     "target_x": null,
     "target_y": null,
     "status": "approved",
-    "submitted_by": null
+    "submitted_by": null,
+    "images": []
   },
   {
     "name": "十代",
@@ -491,17 +518,13 @@
     "description": "1",
     "x_coord": -123.25,
     "y_coord": 84.5,
-    "images": [
-      "data:image/png;base64,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"
-    ],
+    "images": [],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
     "target_y": null,
     "region_id": 1,
-    "screenshot": [
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZkAAAF6CAYAAADLdSXiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAmpSURBVHhe7d1PqOV1HcfhLCEIohYFMhAiadTGxWCttJloF8agdAmxRRPdjYIyZogLmQEXEoJDLQIzcBGzCMEcknbBjCMEDbRoE1Ig/WGYhYTi1rSFDHS+du7vHn73de859z4PnM1nwD8jl5dfmDfnpu2t0x98DAACHx8PALBXRAaAjMgAkBEZADIiA0BGZADIiAwAGZEBICMyAGREBoCMyACQERkAMiIDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJARGQAyIgNARmQAyIgMABmRASAjMgBkRAaAjMgAkBEZADIiA0BGZADIiAwAGZEBICMyAGREBoCMyACQERkAMiIDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJARGQAyIgNARmQAyIgMABmRASAjMgBkRAaAjMgAkBEZADIiA0BGZADIiAwAGZEBICMyAGREBoCMyACQERkAMiIDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJC5aXvr9Afjkd174aUXxxNwRG1vnR5PR56XDAAZL5mZbrxkzp07N/4SR8jJkyfHE0fIjf/+XjIf5SUDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJARGQAyIgNARmQAyIgMABmRASAjMgBkRAaAjMgAkPF9MjP5Ppnd+fZb58fTofLudy6OpwVXnm6/b+aepy6NJ/aR75NZzksGgIzIAJARGQAyIgNARmQAyIgMABmRASBjJzOTncyHDvsOZsrv/vLOeNpXdjIHy05mOS8ZADIiA0BGZADIiAwAGZEBICMyAGREBoCMncxMR2Un84krO//7fesrnxlPa+Wgdyw1O5mDZSeznJcMABmRASAjMgBkRAaAjMgAkBEZADIiA0DGTmYmO5m9MXdnc9h3MFPsZA6WncxyXjIAZEQGgIzIAJARGQAyIgNARmQAyIgMABk7mZkOy06m3sFMsZPZmR3MerOTWc5LBoCMyACQERkAMiIDQEZkAMiIDAAZkQEgYyczk53M7nz62BfG04J3r/1zPK1k6q8/5Qff+N54WvDTC8+Mp31lJ7Pe7GSW85IBICMyAGREBoCMyACQERkAMiIDQEZkAMjYycxkJ7M7c78v5rbvPjueFrz56x+Pp5Xccfyh8bTAToad2Mks5yUDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJCxk5npsOxk7j5/fjyt5A93vTOeFmz6TuaPZ34+nvbUzRcvjic2iJ3Mcl4yAGREBoCMyACQERkAMiIDQEZkAMiIDAAZO5mZjspO5vVbbhlPK3nsifvH00Z57icvj6eV3H39+nhaYCez2exklvOSASAjMgBkRAaAjMgAkBEZADIiA0BGZADI2MnMZCezOwe9k5m7c5nLTuZws5NZzksGgIzIAJARGQAyIgNARmQAyIgMABmRASBjJzPTuuxk3r79zvG0pz779JPjaSVTO5G5Lhw/Np4W3Hrt/fG0UU4+//x4Yo3YySznJQNARmQAyIgMABmRASAjMgBkRAaAjMgAkLGTmWm/djJnz54dTys5c+E342kl9z683n/+v97JzN35zP0+nkd++aPxtODP//nSeGIf2cks5yUDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJCxk5nJTmZvHH/12fG0kpv/+uZ4WvDor14ZTyt58E/XxtNK5u5k5u50br54cTyxh+xklvOSASAjMgBkRAaAjMgAkBEZADIiA0BGZADI2MnMtFc7mbdvv3M87anvv/zMeFrw23eujqd99fC5X4ynlRz2ncxcUzsbO5p57GSW85IBICMyAGREBoCMyACQERkAMiIDQEZkAMjYycx0Yydz6dKl8ZdWcuLEifG0kqnvi1n3ncyjDz45nlYydwcz5bDvZF4/c2Y8sYIbOzk7mY/ykgEgIzIAZEQGgIzIAJARGQAyIgNARmQAyNjJzLQpO5l7H975z+9fOH5sPK3k1mvvj6eV/P3Yev//zqbvZB574v7xtJLn/vHJ8cT/sJNZbr1/sgHYaCIDQEZkAMiIDAAZkQEgIzIAZEQGgIydzEx7tZN55V//Hk976vyD942nBZcvXx5PC947dWo8LZi7A7GTmWfq+2K+dv6h8bSnjvqOxk5mufX+yQZgo4kMABmRASAjMgBkRAaAjMgAkBEZADJ2MjPt105maucyZe73zUyZuwOxk5ln6vti3rvjtvG0r372+3m/f+vOTma59f7JBmCjiQwAGZEBICMyAGREBoCMyACQERkAMnYyM+3VTmbKiRMnxtNK7GRaUzuaub8/kx54YLwseOSbx8bTvrKTObo2+ycbgLUmMgBkRAaAjMgAkBEZADIiA0BGZADI2MnMtF87mSlT30czZdN3Mp869sXxtK/ue/XKeFow+fszsXNhvdnJLDfvJxsAdiAyAGREBoCMyACQERkAMiIDQEZkAMjYycy0LjuZud47dWo8rWRyBzLhy4/9cDyt5Mprl8fTSu75+rzv65n79//8HXeNJzaIncxyXjIAZEQGgIzIAJARGQAyIgNARmQAyIgMABk7mZkOy05mytSOZmonc9A7mCl2MsxhJ7OclwwAGZEBICMyAGREBoCMyACQERkAMiIDQMZOZqajspOZ6/obV8fTSubuUObuYKbM/eezk9lsdjLLeckAkBEZADIiA0BGZADIiAwAGZEBICMyAGREhj1x/Y2rO36Ao0lkAMiIDAAZkQEgIzIAZEQGgIzIAJARGQAyIsNauPLa5R0/wGYSGQAyIgNARmQAyIgMABmRASAjMgBkRAaAjMgAkBEZADIiA0BGZADIiAwAGZEBICMyAGREBoCMyHAobG0/vuMHOBgiA0BGZADIiAwAGZEBICMyAGREBoCMyACQERn2xZXXLu/4AQ4nkQEgIzIAZEQGgIzIAJARGQAyIgNARmQAyIgMu3L9jas7fgD+H5EBICMyAGREBoCMyACQERkAMiIDQEZkAMiIDBtha/vxHT/AehIZADIiA0BGZADIiAwAGZEBICMyAGREBoDMTdtbpz8Yj+zeCy+9OJ6AI2p76/R4OvK8ZADIeMnM9Le3fCsk8KHbP/fV8XTkeckAkPGSASDjJQNARmQAyIgMABmRASAjMgBkRAaAjMgAkBEZADIiA0BGZADIiAwAGZEBICMyAGREBoCMyACQERkAMiIDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJARGQAyIgNARmQAyIgMABmRASAjMgBkRAaAjMgAkBEZADIiA0BGZADIiAwAGZEBICMyAGREBoCMyACQERkAMiIDQEZkAMiIDAAZkQEgIzIAZEQGgIzIAJD5L7nmJuifHNI+AAAAAElFTkSuQmCC"
-    ],
+    "screenshot": [],
     "map_name": "鹦鹉螺式魔法船（第一层）",
     "id": 230,
     "status": "approved",

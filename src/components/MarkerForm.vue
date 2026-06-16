@@ -18,16 +18,8 @@
           <textarea v-model="form.description" placeholder="可选描述" rows="3"></textarea>
         </label>
         <label>
-          截图
-          <input type="file" multiple accept="image/jpeg,image/png,image/gif,image/webp" @change="onFileSelect" />
-          <div v-if="uploading" class="upload-status">转换中... ({{ uploadProgress }})</div>
-          <div v-if="form.images.length > 0" class="image-grid">
-            <div v-for="(url, idx) in form.images" :key="idx" class="image-item">
-              <img :src="url" class="upload-preview" />
-              <button type="button" class="img-remove" @click="removeImage(idx)">&times;</button>
-            </div>
-          </div>
-          <div v-if="uploadError" class="form-error">{{ uploadError }}</div>
+          截图路径
+          <input v-model="screenshotPath" placeholder="如 /screenshots/xxx.png（可选）" />
         </label>
 
         <p v-if="error" class="form-error">{{ error }}</p>
@@ -65,9 +57,7 @@ const isWaypoint = computed(() => {
   return cat?.name === '传送点'
 })
 const error = ref('')
-const uploading = ref(false)
-const uploadProgress = ref('')
-const uploadError = ref('')
+const screenshotPath = ref('')
 const hasTarget = ref(false)
 const selectedWaypointId = ref(null)
 const allWaypoints = ref([])
@@ -84,8 +74,6 @@ const form = reactive({
   target_x: null,
   target_y: null,
 })
-
-const MAX_FILE_SIZE = 5 * 1024 * 1024
 
 async function fetchAllWaypoints() {
   try {
@@ -105,7 +93,9 @@ onMounted(async () => {
     form.description = props.marker.description || ''
     form.x_coord = Number(props.marker.x_coord)
     form.y_coord = Number(props.marker.y_coord)
-    form.images = props.marker.images || props.marker.screenshot ? (Array.isArray(props.marker.screenshot) ? props.marker.screenshot : JSON.parse(props.marker.screenshot || '[]')) : []
+    const imgs = props.marker.images || props.marker.screenshot
+    form.images = Array.isArray(imgs) ? [...imgs] : []
+    screenshotPath.value = form.images.length > 0 ? form.images[0] : ''
     form.target_region_id = props.marker.target_region_id
     form.target_map_name = props.marker.target_map_name || ''
     form.target_x = props.marker.target_x
@@ -132,48 +122,13 @@ watch(isWaypoint, (val) => {
   if (val && allWaypoints.value.length === 0) fetchAllWaypoints()
 })
 
-function onFileSelect(e) {
-  const files = e.target.files
-  if (!files || files.length === 0) return
-  uploadError.value = ''
-  uploading.value = true
-
-  let processed = 0
-  const total = files.length
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i]
-    if (file.size > MAX_FILE_SIZE) {
-      uploadError.value = `${file.name} 超过 5MB 限制`
-      processed++
-      continue
-    }
-    const reader = new FileReader()
-    reader.onload = () => {
-      form.images.push(reader.result)
-      processed++
-      uploadProgress.value = `${processed + 1}/${total}`
-      if (processed >= total) {
-        uploading.value = false
-        uploadProgress.value = ''
-      }
-    }
-    reader.onerror = () => {
-      uploadError.value = `${file.name} 读取失败`
-      processed++
-    }
-    reader.readAsDataURL(file)
-  }
-}
-
-function removeImage(index) {
-  form.images.splice(index, 1)
-}
-
 onBeforeUnmount(() => {})
 
 async function onSubmit() {
   error.value = ''
-  const payload = { ...form, region_id: props.regionId, screenshot: form.images }
+  const imgs = screenshotPath.value.trim() ? [screenshotPath.value.trim()] : []
+  form.images = imgs
+  const payload = { ...form, region_id: props.regionId, screenshot: imgs }
   emit('submit', payload)
 }
 </script>
