@@ -14,10 +14,10 @@
       <p v-if="marker.description" class="desc">{{ marker.description }}</p>
       <p class="coords">坐标: ({{ marker.x_coord }}, {{ marker.y_coord }})</p>
       <p v-if="marker.submitter_name" class="submitter">提交者: {{ marker.submitter_name }}</p>
-      <div v-if="images.length > 0" class="image-gallery">
-        <img v-for="(url, i) in images" :key="i" :src="url" :alt="marker.name + ' 截图'" class="screenshot" @click="enlarged = enlarged === i ? null : i" />
+      <div v-if="screenshots.length > 0" class="image-gallery">
+        <img v-for="(url, i) in screenshots" :key="i" :src="url" :alt="marker.name + ' 截图'" class="screenshot" @click="enlarged = enlarged === i ? null : i" />
         <div v-if="enlarged !== null" class="enlarged-overlay" @click="enlarged = null">
-          <img :src="images[enlarged]" class="enlarged-img" />
+          <img :src="screenshots[enlarged]" class="enlarged-img" />
         </div>
       </div>
       <div class="action-bar" v-if="$slots.actions">
@@ -48,13 +48,9 @@ const props = defineProps({
 const emit = defineEmits(['close'])
 
 const enlarged = ref(null)
-const images = computed(() => {
-  if (props.marker?.images && Array.isArray(props.marker.images) && props.marker.images.length > 0)
-    return props.marker.images
-  if (props.marker?.screenshot) {
-    if (Array.isArray(props.marker.screenshot)) return props.marker.screenshot
-    try { const p = JSON.parse(props.marker.screenshot); return Array.isArray(p) ? p : [] } catch { return [] }
-  }
+const screenshots = computed(() => {
+  const s = props.marker?.screenshot
+  if (Array.isArray(s)) return s.filter(u => u && !String(u).startsWith('data:'))
   return []
 })
 

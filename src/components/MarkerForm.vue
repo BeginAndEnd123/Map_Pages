@@ -69,6 +69,7 @@ const form = reactive({
   x_coord: 0,
   y_coord: 0,
   images: [],
+  screenshot: [],
   target_region_id: null,
   target_map_name: '',
   target_x: null,
@@ -93,9 +94,9 @@ onMounted(async () => {
     form.description = props.marker.description || ''
     form.x_coord = Number(props.marker.x_coord)
     form.y_coord = Number(props.marker.y_coord)
-    const imgs = props.marker.images || props.marker.screenshot
-    form.images = Array.isArray(imgs) ? [...imgs] : []
-    screenshotPath.value = form.images.length > 0 ? form.images[0] : ''
+    const imgs = props.marker.screenshot
+    form.screenshot = Array.isArray(imgs) ? [...imgs] : []
+    screenshotPath.value = form.screenshot.length > 0 ? form.screenshot[0] : ''
     form.target_region_id = props.marker.target_region_id
     form.target_map_name = props.marker.target_map_name || ''
     form.target_x = props.marker.target_x
@@ -127,7 +128,7 @@ onBeforeUnmount(() => {})
 async function onSubmit() {
   error.value = ''
   const imgs = screenshotPath.value.trim() ? [screenshotPath.value.trim()] : []
-  form.images = imgs
+  form.screenshot = imgs
   const payload = { ...form, region_id: props.regionId, screenshot: imgs }
   emit('submit', payload)
 }
