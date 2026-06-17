@@ -87,9 +87,9 @@
 ## 四、部署（无需构建）
 
 ```powershell
-git add docs/data/markers.json public/data/markers.json
+git add .
 git commit -m "deploy: 更新标记 — xxx"
-git push
+git push origin master
 ```
 
 1~3 分钟后生效：`https://beginandend123.github.io/Map_Pages/`
