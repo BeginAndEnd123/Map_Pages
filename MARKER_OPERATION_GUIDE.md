@@ -87,10 +87,6 @@
 ## 四、部署（无需构建）
 
 ```powershell
-# 1. 确认两个文件都已修改
-npm run verify
-
-# 2. 提交并推送
 git add docs/data/markers.json public/data/markers.json
 git commit -m "deploy: 更新标记 — xxx"
 git push

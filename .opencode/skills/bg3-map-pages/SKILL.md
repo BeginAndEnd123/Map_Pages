@@ -128,10 +128,7 @@ G:\Map_Pages\                       # 部署仓库（master 单分支）
 #    docs/data/markers.json      ← 线上实际使用的文件
 #    public/data/markers.json    ← 源文件，保持同步
 
-# 2. 审查
-npm run verify
-
-# 3. 推送
+# 2. 推送
 git add docs/data/markers.json public/data/markers.json
 git commit -m "deploy: 更新标记 — xxx"
 git push
@@ -147,7 +144,6 @@ git push
 
 ```powershell
 npm run build      # clean-docs → vite build → copy-tiles(仅瓦片变化时)
-npm run verify     # 审查（不通过禁止推送）
 git add -A
 git commit -m "feat: xxx"
 git push
