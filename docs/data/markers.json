@@ -17,24 +17,7 @@
     "status": "approved",
     "submitted_by": null
   },
-  {
-    "id": 1,
-    "region_id": 2,
-    "category_id": 1,
-    "name": "蜘蛛洞",
-    "description": "",
-    "x_coord": -132.48,
-    "y_coord": 112.16,
-    "screenshot": [],
-    "created_at": "2026-06-03T14:52:10",
-    "map_name": "鹦鹉螺坠毁区域",
-    "target_region_id": 2,
-    "target_map_name": "低语深地",
-    "target_x": -140.25,
-    "target_y": 62.8,
-    "status": "approved",
-    "submitted_by": null
-  },
+  
   {
     "id": 2,
     "region_id": 2,
@@ -413,24 +396,7 @@
     "status": "approved",
     "submitted_by": null
   },
-  {
-    "id": 23,
-    "region_id": 2,
-    "category_id": 1,
-    "name": "低语深地",
-    "description": "",
-    "x_coord": -140.25,
-    "y_coord": 62.8,
-    "screenshot": [],
-    "created_at": "2026-06-08T06:43:04",
-    "map_name": "低语深地",
-    "target_region_id": null,
-    "target_map_name": "",
-    "target_x": null,
-    "target_y": null,
-    "status": "approved",
-    "submitted_by": null
-  },
+  
   {
     "id": 24,
     "region_id": 2,
