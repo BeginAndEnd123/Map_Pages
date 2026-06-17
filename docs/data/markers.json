@@ -792,5 +792,41 @@
     "created_at": "2026-06-17T18:09:48.988Z",
     "submitted_by": null,
     "id": 43
+  },
+  {
+    "name": "不死骑士的骸骨铠甲",
+    "category_id": 3,
+    "description": "船战获取",
+    "x_coord": -141.625,
+    "y_coord": 101.4375,
+    "screenshot": ["screenshots/不死骑士的骸骨铠甲.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-17T18:24:42.968Z",
+    "submitted_by": null,
+    "id": 44
+  },
+  {
+    "name": "伯纳德",
+    "category_id": 2,
+    "description": "掉落：造物之光",
+    "x_coord": -173.09375,
+    "y_coord": 89.53125,
+    "screenshot": ["screenshots/造物之光.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-17T18:26:08.115Z",
+    "submitted_by": null,
+    "id": 45
   }
 ]
