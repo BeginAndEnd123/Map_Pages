@@ -846,5 +846,41 @@
     "created_at": "2026-06-17T18:38:32.727Z",
     "submitted_by": null,
     "id": 46
+  },
+  {
+    "name": "戴摩(第一章)",
+    "category_id": 4,
+    "description": "售卖：",
+    "x_coord": -97.265625,
+    "y_coord": 147.53125,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-17T18:40:57.806Z",
+    "submitted_by": null,
+    "id": 47
+  },
+  {
+    "name": "阿尔肯",
+    "category_id": 4,
+    "description": "售卖：",
+    "x_coord": -106.453125,
+    "y_coord": 153.140625,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-17T18:41:35.592Z",
+    "submitted_by": null,
+    "id": 48
   }
 ]
