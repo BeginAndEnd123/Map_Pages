@@ -502,5 +502,23 @@
     "status": "approved",
     "submitted_by": null,
     "created_at": "2026-06-16T12:49:49.578Z"
+  },
+  {
+    "name": "眼魔",
+    "category_id": 2,
+    "description": "掉落：训练木剑",
+    "x_coord": -157.0625,
+    "y_coord": 160.8125,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-17T12:07:31.522Z",
+    "submitted_by": null,
+    "id": 226
   }
 ]
