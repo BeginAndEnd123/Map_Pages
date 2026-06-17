@@ -8,7 +8,8 @@ export function useMarkerSearch() {
   let searchDebounce = null
   let blurTimer = null
 
-  async function onSearchInput() {
+  async function onSearchInput(e) {
+    keyword.value = e.target?.value ?? ''
     showSearchResults.value = true
     if (!keyword.value) {
       searchResults.value = []
