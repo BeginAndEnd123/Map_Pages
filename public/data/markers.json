@@ -486,7 +486,7 @@
     "submitted_by": null
   },
   {
-    "name": "ers",
+    "name": "测试",
     "category_id": 2,
     "description": "",
     "x_coord": -123.25,
@@ -496,7 +496,7 @@
     "target_x": null,
     "target_y": null,
     "region_id": 1,
-    "screenshot": [],
+    "screenshot": ["screenshots/127320002_p0.png"],
     "map_name": "鹦鹉螺式魔法船（第一层）",
     "id": 230,
     "status": "approved",
