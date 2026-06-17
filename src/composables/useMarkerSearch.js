@@ -23,7 +23,8 @@ export function useMarkerSearch() {
         const all = mergeData(json, mods)
         const kw = keyword.value.toLowerCase()
         searchResults.value = all.filter(m =>
-          m.name && m.name.toLowerCase().includes(kw)
+          (m.name && m.name.toLowerCase().includes(kw)) ||
+          (m.description && m.description.toLowerCase().includes(kw))
         )
       } catch {
         searchResults.value = []
