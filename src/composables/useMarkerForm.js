@@ -39,19 +39,8 @@ export function useMarkerForm() {
     }
   }
 
-  async function onDeleteMarker(id) {
-    if (!confirm('确认删除该标记？')) return false
-    try {
-      await mapStore.removeMarker(id)
-      return true
-    } catch (e) {
-      alert('删除失败，请稍后重试')
-      return false
-    }
-  }
-
   return {
     showAddForm, editingMarker, formSubmitting,
-    onEditMarker, closeForm, onFormSubmit, onDeleteMarker,
+    onEditMarker, closeForm, onFormSubmit,
   }
 }

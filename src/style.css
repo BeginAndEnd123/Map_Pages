@@ -77,3 +77,99 @@ h1, h2, h3, h4 {
   h2 { font-size: 16px !important; }
   h3 { font-size: 10px !important; }
 }
+
+/* ── Shared Component Classes ── */
+
+.btn-gold {
+  padding: 8px 16px; border: none; border-radius: var(--radius-sm);
+  background: var(--gold); color: var(--bg-deep);
+  font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: background var(--transition);
+}
+.btn-gold:hover { background: var(--gold-light); }
+.btn-gold:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-outline {
+  padding: 8px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: transparent; color: var(--text-secondary);
+  font-family: var(--font-body); font-size: 13px;
+  cursor: pointer; transition: all var(--transition);
+}
+.btn-outline:hover { border-color: var(--text-secondary); color: var(--text-primary); }
+
+.btn-gold-border {
+  padding: 8px 16px; border: 1px solid var(--gold-dim); border-radius: var(--radius-sm);
+  background: transparent; color: var(--gold);
+  font-family: var(--font-body); font-size: 13px;
+  cursor: pointer; transition: all var(--transition);
+}
+.btn-gold-border:hover { background: var(--gold); color: var(--bg-deep); border-color: var(--gold); }
+
+.btn-danger {
+  padding: 2px 8px; border: none; border-radius: var(--radius-sm);
+  background: transparent; color: var(--danger);
+  font-size: 11px; cursor: pointer; font-family: var(--font-body);
+}
+.btn-danger:hover { background: var(--danger); color: #fff; }
+.btn-danger:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.btn-ghost {
+  padding: 2px 8px; border: none; border-radius: var(--radius-sm);
+  background: transparent; color: var(--gold-dim);
+  font-size: 11px; cursor: pointer; font-family: var(--font-body);
+}
+.btn-ghost:hover { color: var(--gold); }
+
+.btn-close {
+  background: none; border: none; color: var(--text-muted);
+  font-size: 20px; cursor: pointer; padding: 0; line-height: 1;
+}
+.btn-close:hover { color: var(--gold); }
+
+.form-input {
+  width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--bg-input); color: var(--text-primary);
+  font-size: 13px; font-family: var(--font-body); outline: none;
+  transition: border var(--transition);
+}
+.form-input:focus { border-color: var(--gold-dim); }
+
+.form-select {
+  width: 100%; padding: 7px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--bg-input); color: var(--text-primary);
+  font-size: 13px; font-family: var(--font-body); cursor: pointer; outline: none;
+  transition: border var(--transition); appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a8578'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 10px center;
+}
+.form-select:focus { border-color: var(--gold-dim); }
+
+.form-label {
+  display: block; font-size: 13px; color: var(--text-secondary); margin-bottom: 14px;
+}
+
+.form-error {
+  color: var(--danger); font-size: 12px; margin: 4px 0 0 0;
+}
+
+.overlay {
+  position: fixed; inset: 0; background: rgba(8,8,18,0.5);
+  z-index: 1100; display: flex; align-items: center; justify-content: center;
+}
+
+.dialog-card {
+  background: var(--bg-surface); color: var(--text-primary);
+  border: 1px solid var(--border-gold); border-radius: var(--radius-sm);
+  width: 380px; max-width: 90%; max-height: 80vh;
+  overflow-y: auto; box-shadow: var(--shadow-gold); position: relative;
+}
+
+.dialog-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px 0 20px; cursor: grab; user-select: none;
+}
+.dialog-header:active { cursor: grabbing; }
+.dialog-header h3 {
+  font-family: var(--font-display); font-size: 16px;
+  color: var(--gold); letter-spacing: 0.06em; margin: 0;
+}

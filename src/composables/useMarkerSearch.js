@@ -1,8 +1,5 @@
-/**
- * useMarkerSearch — 标记搜索（静态数据版）
- */
 import { ref } from 'vue'
-import { loadMarkers } from '../data/loader'
+import { loadMarkers, mergeData, readModifications } from '../data/index'
 
 export function useMarkerSearch() {
   const keyword = ref('')
@@ -20,7 +17,9 @@ export function useMarkerSearch() {
     if (searchDebounce) clearTimeout(searchDebounce)
     searchDebounce = setTimeout(async () => {
       try {
-        const all = await loadMarkers()
+        const json = await loadMarkers()
+        const mods = readModifications('markers')
+        const all = mergeData(json, mods)
         const kw = keyword.value.toLowerCase()
         searchResults.value = all.filter(m =>
           m.name && m.name.toLowerCase().includes(kw)

@@ -39,7 +39,7 @@
 
 <script setup>
 import { ref, reactive, onBeforeUnmount } from 'vue'
-import { localAddRegion, localUpdateRegion, localDeleteRegion } from '../data/loader'
+import { addItem, updateItem, deleteItem } from '../data/index'
 import { useMapStore } from '../stores/map'
 
 const props = defineProps({
@@ -63,9 +63,9 @@ async function onAdd() {
   submitting.value = true
   try {
     if (editingId.value) {
-      localUpdateRegion(editingId.value, { name: form.name.trim(), description: form.description.trim() })
+      updateItem('regions', editingId.value, { name: form.name.trim(), description: form.description.trim() })
     } else {
-      localAddRegion({ name: form.name.trim(), description: form.description.trim() })
+      addItem('regions', { name: form.name.trim(), description: form.description.trim() }, props.regions)
     }
     cancelEdit()
     mapStore.fetchRegions()
@@ -98,7 +98,7 @@ async function onDelete(r) {
   if (!confirm(`确认删除区域「${r.name}」？`)) return
   deleting.value = r.id
   try {
-    localDeleteRegion(r.id)
+    deleteItem('regions', r.id)
     mapStore.fetchRegions()
     emit('refresh')
   } catch {

@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <div class="nav-left">
-      <button class="menu-btn" @click="uiStore.toggleSidebar()" aria-label="菜单">
+      <button class="menu-btn" @click="sidebar.toggleSidebar()" aria-label="菜单">
         <span class="menu-icon"></span>
       </button>
       <span class="brand">BG3 地图</span>
@@ -26,12 +26,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/auth'
-import { useUiStore } from '../stores/ui'
+import { useSidebar } from '../composables/useSidebar'
 
 defineEmits(['toggle-sidebar'])
 
 const authStore = useAuthStore()
-const uiStore = useUiStore()
+const sidebar = useSidebar()
 const password = ref('')
 
 async function onLogin() {

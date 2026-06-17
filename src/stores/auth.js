@@ -1,19 +1,16 @@
-/**
- * 认证状态管理 — localStorage 管理员认证
- */
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { adminLogin as doLogin, adminLogout as doLogout, isAdminLoggedIn, getAdminUser } from '../data/loader'
+import { login as doLogin, logout as doLogout, isLoggedIn, getUser } from '../data/index'
 
 export const useAuthStore = defineStore('auth', () => {
-  const user = ref(getAdminUser())
-  const token = ref(isAdminLoggedIn() ? 'local-admin' : '')
+  const user = ref(getUser())
+  const token = ref(isLoggedIn() ? 'local-admin' : '')
 
   async function login(password) {
     const ok = await doLogin(password)
     if (ok) {
       token.value = 'local-admin'
-      user.value = getAdminUser()
+      user.value = getUser()
     } else {
       throw new Error('密码错误')
     }
@@ -26,8 +23,8 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   function fetchUser() {
-    if (isAdminLoggedIn()) {
-      user.value = getAdminUser()
+    if (isLoggedIn()) {
+      user.value = getUser()
       token.value = 'local-admin'
     }
   }

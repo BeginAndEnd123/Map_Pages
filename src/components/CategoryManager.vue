@@ -47,7 +47,7 @@
 
 <script setup>
 import { ref, reactive, onBeforeUnmount } from 'vue'
-import { localAddCategory, localUpdateCategory, localDeleteCategory } from '../data/loader'
+import { addItem, updateItem, deleteItem } from '../data/index'
 import { useMapStore } from '../stores/map'
 
 const props = defineProps({
@@ -76,9 +76,9 @@ async function onAdd() {
   submitting.value = true
   try {
     if (editingId.value) {
-      localUpdateCategory(editingId.value, { name: form.name.trim(), icon: form.icon })
+      updateItem('categories', editingId.value, { name: form.name.trim(), icon: form.icon })
     } else {
-      localAddCategory({ name: form.name.trim(), icon: form.icon, sort_order: props.categories.length })
+      addItem('categories', { name: form.name.trim(), icon: form.icon, sort_order: props.categories.length }, props.categories)
     }
     cancelEdit()
     mapStore.fetchCategories()
@@ -111,7 +111,7 @@ async function onDelete(cat) {
   if (!confirm(`确认删除分类「${cat.name}」？`)) return
   deleting.value = cat.id
   try {
-    localDeleteCategory(cat.id)
+    deleteItem('categories', cat.id)
     mapStore.fetchCategories()
     emit('refresh')
   } catch {

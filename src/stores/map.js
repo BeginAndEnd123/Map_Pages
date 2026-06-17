@@ -1,13 +1,10 @@
-/**
- * 地图数据状态管理 (Pinia) — 静态数据 + localStorage
- */
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import {
-  loadRegions, loadCategories, loadMarkers,
-  loadMapsIndex, getChapterKey, getMapsForChapter,
-  localAddMarker, localUpdateMarker, localDeleteMarker,
-} from '../data/loader'
+  loadRegions, loadCategories, loadMarkers, loadMapsIndex,
+  getChapterKey, getMapsForChapter, mergeData, readModifications,
+  addItem, updateItem, deleteItem,
+} from '../data/index'
 
 export const CHAPTER_KEYS = ['chapter0', 'chapter1', 'chapter2', 'chapter3', 'chapter4']
 
@@ -22,7 +19,9 @@ export const useMapStore = defineStore('map', () => {
 
   async function fetchRegions() {
     try {
-      regions.value = await loadRegions()
+      const json = await loadRegions()
+      const mods = readModifications('regions')
+      regions.value = mergeData(json, mods)
       if (!currentRegion.value && regions.value.length > 0) {
         currentRegion.value = regions.value[0]
       }
@@ -33,7 +32,9 @@ export const useMapStore = defineStore('map', () => {
 
   async function fetchCategories() {
     try {
-      categories.value = await loadCategories()
+      const json = await loadCategories()
+      const mods = readModifications('categories')
+      categories.value = mergeData(json, mods)
     } catch (e) {
       console.error('获取分类列表失败:', e)
     }
@@ -41,7 +42,9 @@ export const useMapStore = defineStore('map', () => {
 
   async function fetchMarkers(params = {}) {
     try {
-      const all = await loadMarkers()
+      const json = await loadMarkers()
+      const mods = readModifications('markers')
+      const all = mergeData(json, mods)
       let filtered = [...all]
       if (params.region_id) {
         filtered = filtered.filter(m => m.region_id == params.region_id)
@@ -88,21 +91,22 @@ export const useMapStore = defineStore('map', () => {
     return getChapterKey(regionSortOrder)
   }
 
-  // ── 标记 CRUD (localStorage) ──
   async function addMarker(data) {
-    const item = localAddMarker(data)
+    const item = addItem('markers', data, markers.value)
+    item.status = item.status || 'approved'
+    item.created_at = item.created_at || new Date().toISOString()
     markers.value = [...markers.value, item]
     return item
   }
 
   async function editMarker(id, data) {
-    const item = localUpdateMarker(id, data)
+    const item = updateItem('markers', id, data)
     markers.value = markers.value.map(m => m.id === id ? { ...m, ...item } : m)
     return item
   }
 
   async function removeMarker(id) {
-    localDeleteMarker(id)
+    deleteItem('markers', id)
     markers.value = markers.value.filter(m => m.id !== id)
   }
 

@@ -1,7 +1,10 @@
-import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export const useUiStore = defineStore('ui', () => {
+let _instance = null
+
+export function useSidebar() {
+  if (_instance) return _instance
+
   const sidebarOpen = ref(window.innerWidth > 768)
 
   function toggleSidebar() {
@@ -16,5 +19,6 @@ export const useUiStore = defineStore('ui', () => {
     sidebarOpen.value = true
   }
 
-  return { sidebarOpen, toggleSidebar, closeSidebar, openSidebar }
-})
+  _instance = { sidebarOpen, toggleSidebar, closeSidebar, openSidebar }
+  return _instance
+}

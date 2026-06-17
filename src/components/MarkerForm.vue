@@ -36,7 +36,7 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted, watch, onBeforeUnmount } from 'vue'
-import { loadMarkers } from '../data/loader'
+import { loadMarkers, mergeData, readModifications } from '../data/index'
 import { useMapStore } from '../stores/map'
 
 const props = defineProps({
@@ -80,7 +80,9 @@ async function fetchAllWaypoints() {
   try {
     const wpCat = props.categories.find(c => c.name === '传送点')
     if (!wpCat) return
-    const all = await loadMarkers()
+    const json = await loadMarkers()
+    const mods = readModifications('markers')
+    const all = mergeData(json, mods)
     allWaypoints.value = all.filter(m => m.category_id === wpCat.id)
   } catch {
     allWaypoints.value = []

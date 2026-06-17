@@ -1,8 +1,5 @@
-/**
- * useRecentMarkers — 最新标记列表 + 分页（静态数据版）
- */
 import { ref, computed } from 'vue'
-import { loadMarkers } from '../data/loader'
+import { loadMarkers, mergeData, readModifications } from '../data/index'
 
 export function useRecentMarkers(pageSize = 5) {
   const recentMarkers = ref([])
@@ -42,7 +39,9 @@ export function useRecentMarkers(pageSize = 5) {
 
   async function fetchRecentMarkers() {
     try {
-      const all = await loadMarkers()
+      const json = await loadMarkers()
+      const mods = readModifications('markers')
+      const all = mergeData(json, mods)
       const sorted = [...all].sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
       recentTotal.value = sorted.length
       const offset = (recentPage.value - 1) * pageSize
