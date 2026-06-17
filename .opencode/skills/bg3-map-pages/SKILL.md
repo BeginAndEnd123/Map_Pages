@@ -115,59 +115,50 @@ G:\Map_Pages\                       # 部署仓库（master 单分支）
 | 第2章（幽影诅咒之地/月出之塔） | `chapter3` | 4 |
 | 第3章（博德之门） | `chapter4` | 5 |
 
-## 构建与部署
+## 部署流程
 
-### 重要：Windows PowerShell 5.1 不支持 `&&`
+项目虽用 Vue 构建，但部署到 GitHub Pages 的是 `docs/` 下纯静态文件。**只有改源码（`.vue`/`.js`/`.css`）才需要构建；改数据（标记/分类/区域）直接改 `docs/data/` 即可。**
 
-`package.json` 的 build 脚本必须使用 PowerShell 兼容的分号+条件语法：
+### 只改标记数据（推荐，无需构建）
 
-```json
-"build": "vite build; if ($?) { node scripts/copy-tiles.js }"
-```
-
-> 如果使用 `&&`，在 PowerShell 5.1 中 `&&` 后面的 `copy-tiles.js` 不会执行，导致 `docs/TileMap/` 缺失——地图瓦片全部 404，但标记仍正常渲染。
-
-### 构建（必须完整执行两步）
+标记是纯 JSON 文件，浏览器直接 fetch，不经过 Vite 编译。
 
 ```powershell
-npm run build
-# 1. vite build → docs/（JS/CSS/HTML + public/ 下静态资源）
-# 2. node scripts/copy-tiles.js → docs/TileMap/（~171MB WebP 瓦片）
-```
+# 1. 编辑标记（两个文件同步修改）
+#    docs/data/markers.json      ← 线上实际使用的文件
+#    public/data/markers.json    ← 源文件，保持同步
 
-构建成功标志：`docs/TileMap/` 目录存在且有 `chapter0/` ~ `chapter4/` 子目录。
-
-### 部署前审查（必须通过！）
-
-**推送前必须运行审查脚本：**
-
-```powershell
+# 2. 审查
 npm run verify
-# 等价于: node scripts/verify-deploy.js
-```
 
-审查内容：
-1. `docs/index.html` 和 `docs/assets/` 存在
-2. `docs/data/` 下 4 个 JSON 文件存在且可解析
-3. `docs/TileMap/` 目录存在
-4. 对比 `maps_index.json` 检查 97 张地图瓦片完整性
-5. `docs/icons/` 和 `docs/screenshots/` 存在
-
-**审查不通过则禁止推送。** 审查通过输出 `审查通过 — 可以安全推送`。
-
-### 完整部署流程
-
-```powershell
-# 1. 修改源码（public/data/ 标记数据等）
-# 2. 构建
-npm run build
-# 3. 审查（不通过则回到步骤 2 修复）
-npm run verify
-# 4. 推送（仅审查通过后）
-git add docs/ package.json package-lock.json
-git commit -m "deploy: 描述本次变更"
+# 3. 推送
+git add docs/data/markers.json public/data/markers.json
+git commit -m "deploy: 更新标记 — xxx"
 git push
 ```
+
+**不需要 `npm run build`，不需要复制瓦片。推送即上线。**
+
+> 原则：`docs/` 和 `public/` 下的同名数据文件必须保持同步。`public/` 是源，`docs/` 是部署目标。
+
+### 改源码（Vue/JS/CSS）
+
+只有改 `.vue`、`src/` 下 JS、`style.css`、路由等才需要完整构建。
+
+```powershell
+npm run build      # clean-docs → vite build → copy-tiles(仅瓦片变化时)
+npm run verify     # 审查（不通过禁止推送）
+git add -A
+git commit -m "feat: xxx"
+git push
+```
+
+### 构建说明
+
+- `vite build` 输出到 `docs/`，`emptyOutDir: false` 不清空
+- `clean-docs.js` 构建前清理 `docs/` 但**保留 `TileMap/`**
+- `copy-tiles.js` 通过 `.tilemap-stamp` 时间戳判断，瓦片无变化时跳过（171MB 不复制）
+- 日常改数据构建完全不需要，改源码构建约 2 秒
 
 GitHub Pages 设置：**Deploy from a branch** → `master` / `/docs`
 
