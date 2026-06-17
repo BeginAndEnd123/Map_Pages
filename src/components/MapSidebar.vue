@@ -83,6 +83,8 @@
     </button>
 
     <button v-if="isAdmin" class="export-btn" @click="$emit('export-markers')">导出本地标记</button>
+
+    <button v-if="isAdmin" class="clear-data-btn" @click="$emit('clear-data')">清除本地数据</button>
   </div>
 </template>
 
@@ -111,7 +113,7 @@ defineEmits([
   'search-input', 'search-focus', 'search-blur', 'search-select',
   'recent-click', 'recent-hover', 'recent-leave',
   'recent-page', 'goto-page-input', 'goto-page-confirm',
-  'start-add', 'export-markers',
+  'start-add', 'export-markers', 'clear-data',
   'region-manage', 'category-manage',
 ])
 </script>
@@ -268,4 +270,15 @@ h3 {
   cursor: pointer; transition: all var(--transition);
 }
 .export-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.clear-data-btn {
+  width: 100%; margin-top: 8px; padding: 7px 12px;
+  border: 1px solid rgba(255,80,80,0.35); border-radius: var(--radius-sm);
+  background: transparent; color: rgba(255,120,120,0.8);
+  font-family: var(--font-body); font-size: 12px;
+  cursor: pointer; transition: all var(--transition);
+}
+.clear-data-btn:hover {
+  background: rgba(255,80,80,0.15); border-color: rgba(255,80,80,0.6); color: #ff6666;
+}
 </style>

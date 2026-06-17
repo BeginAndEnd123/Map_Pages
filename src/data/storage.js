@@ -58,6 +58,14 @@ function clearModifications(type) {
   _remove(STORAGE_KEYS[type])
 }
 
+function clearAll() {
+  _remove(STORAGE_KEYS.admin)
+  _remove(STORAGE_KEYS.adminUser)
+  _remove(STORAGE_KEYS.regions)
+  _remove(STORAGE_KEYS.categories)
+  _remove(STORAGE_KEYS.markers)
+}
+
 export {
   STORAGE_KEYS,
   EMPTY_MOD,
@@ -69,4 +77,5 @@ export {
   writeAdminUser,
   clearAdmin,
   clearModifications,
+  clearAll,
 }

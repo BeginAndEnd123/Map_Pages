@@ -5,6 +5,7 @@ export {
   readAdminFlag,
   readAdminUser,
   clearAdmin,
+  clearAll,
 } from './storage'
 
 export {

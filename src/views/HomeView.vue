@@ -33,6 +33,7 @@
         @goto-page-confirm="recent.onGotoPage"
         @start-add="onStartAdd"
         @export-markers="onExportMarkers"
+        @clear-data="onClearData"
         @region-manage="showRegionManager = true"
         @category-manage="showCategoryManager = true"
       />
@@ -99,7 +100,7 @@ import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useMapStore } from '../stores/map'
 import { useAuthStore } from '../stores/auth'
 import { useSidebar } from '../composables/useSidebar'
-import { getExportData } from '../data/index'
+import { getExportData, clearAll, clearCaches } from '../data/index'
 import SidePanel from '../components/SidePanel.vue'
 import MapContainer from '../components/MapContainer.vue'
 import MarkerPopup from '../components/MarkerPopup.vue'
@@ -279,6 +280,22 @@ function onExportMarkers() {
   a.download = `bg3_local_markers_${new Date().toISOString().slice(0, 10)}.json`
   a.click()
   URL.revokeObjectURL(url)
+}
+
+async function onClearData() {
+  if (!confirm('确定要清除所有本地数据吗？\n\n这将删除所有本地新增/修改的标记、分类和区域，并清除管理员登录状态。')) return
+  clearAll()
+  clearCaches()
+  authStore.fetchUser()
+  await mapStore.fetchRegions()
+  await mapStore.fetchCategories()
+  if (mapStore.regions.length > 0) {
+    nav.currentRegionId.value = mapStore.regions[0].id
+    mapStore.setRegion(mapStore.regions[0])
+    await nav.fetchMaps()
+  }
+  await nav.loadMarkers()
+  recent.fetchRecentMarkers()
 }
 
 async function onRegionChange(regionId) {

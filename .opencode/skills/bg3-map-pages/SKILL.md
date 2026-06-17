@@ -11,7 +11,9 @@ description: BG3 交互式地图静态站点 — 基于 Vue3+Leaflet 的 GitHub 
 
 博德之门 3 全章节交互式地图，基于 Leaflet + CRS.Simple 瓦片渲染。原项目为 FastAPI+Vue3+MySQL 全栈应用，已改造为纯静态站点部署于 GitHub Pages。
 
-**管理员密码**: `admin123`（SHA-256 校验，在 NavBar 顶部输入）
+**管理员密码**：`admin123`（SHA-256 校验，在 NavBar 顶部输入）
+
+> 详细运作原理见 **[PROJECT_ARCHITECTURE.md](./PROJECT_ARCHITECTURE.md)** — 数据流、组件协作、Leaflet 渲染、CRUD 机制等。
 
 ## 技术架构
 
@@ -19,150 +21,132 @@ description: BG3 交互式地图静态站点 — 基于 Vue3+Leaflet 的 GitHub 
 |------|------|------|
 | 框架 | Vue 3 (Composition API) | SPA |
 | 路由 | Vue Router (Hash 模式) | `createWebHashHistory` |
-| 状态管理 | Pinia | auth store + map store |
+| 状态管理 | Pinia | `auth` store + `map` store |
 | 地图引擎 | Leaflet 1.9 | CRS.Simple 坐标系 |
-| 构建工具 | Vite 5 | `base: '/Map_Pages/'` |
+| 构建工具 | Vite 5 | `base: '/Map_Pages/'`, `outDir: 'docs'` |
 | 数据存储 | localStorage + 静态 JSON | 管理员修改本地持久化 |
-| 部署 | GitHub Pages (gh-pages 分支) | HTTPS 推送 |
+| 部署 | GitHub Pages (master 分支 /docs) | 单分支部署 |
 
-## 仓库结构（G:\Map_Pages）
+## 仓库结构
 
 ```
-G:\Map_Pages/                  # 工作目录（部署仓库）
-├── index.html                 # SPA 入口（gh-pages 分支）
-├── assets/                    # 构建产物 JS/CSS（gh-pages）
-├── data/                      # 静态数据 JSON（gh-pages）
-│   ├── regions.json           # 5 个章节区域
-│   ├── categories.json        # 4 种标记分类
-│   ├── markers.json           # 已审核标记数据
-│   └── maps_index.json        # 各章节地图列表+tile_url
-├── icons/                     # 分类图标 SVG
-├── screenshots/               # 标记截图
-├── TileMap/                   # WebP 瓦片（zoom 1-6，~90,388 文件，~171MB）
-├── src/                       # 源码（master 分支）
-│   ├── main.js                # Vue 入口
-│   ├── router/index.js        # Hash 路由
-│   ├── data/loader.js         # 静态数据加载+localStorage 合并引擎 ★
+G:\Map_Pages\                       # 部署仓库（master 单分支）
+├── index.html                      # SPA 入口
+├── package.json                    # vue/vue-router/pinia/leaflet
+├── vite.config.js                  # base: '/Map_Pages/', outDir: 'docs'
+├── public/                         # 静态资源
+│   ├── data/                       # regions.json / categories.json / markers.json / maps_index.json
+│   └── icons/                     # 分类图标 SVG
+├── TileMap/                        # WebP 瓦片（zoom 1-6, ~171MB）
+├── docs/                           # ★ 构建产物 = GitHub Pages 站点根目录
+├── src/                            # 源码
+│   ├── main.js                     # Vue 入口
+│   ├── App.vue                     # 根组件
+│   ├── style.css                   # 全局样式（暗色金边主题）
+│   ├── router/index.js             # Hash 路由
+│   ├── data/                       # ★ 纯函数数据层
+│   │   ├── index.js                # 统一导出
+│   │   ├── sources.js              # fetch JSON + 缓存
+│   │   ├── storage.js              # localStorage 封装
+│   │   ├── merge.js                # JSON+localStorage 合并
+│   │   ├── auth.js                 # SHA-256 登录
+│   │   └── crud.js                 # 本地增删改
 │   ├── stores/
-│   │   ├── auth.js            # 管理员认证（SHA-256）
-│   │   └── map.js             # 地图数据状态
-│   ├── composables/           # 6 个组合式函数
-│   ├── components/            # 9 个 Vue 组件
+│   │   ├── auth.js                 # 认证状态 (Pinia)
+│   │   └── map.js                  # 地图数据状态 (Pinia)
+│   ├── composables/                # 6 个组合式函数
+│   │   ├── useMapNavigation.js     # 章节/地图切换
+│   │   ├── useMarkerSearch.js      # 全局搜索
+│   │   ├── useRecentMarkers.js     # 最新标记分页
+│   │   ├── useMarkerForm.js        # 标记表单提交
+│   │   ├── usePickMode.js          # 坐标拾取
+│   │   └── useSidebar.js           # 侧边栏开关
+│   ├── components/                 # 8 个组件
+│   │   ├── NavBar.vue              # 顶部导航（管理员入口）
+│   │   ├── MapContainer.vue        # Leaflet 地图
+│   │   ├── MapSidebar.vue          # 侧边栏（章节/搜索/标记列表）
+│   │   ├── SidePanel.vue           # 侧边栏容器（响应式）
+│   │   ├── MarkerPopup.vue         # 标记悬浮卡
+│   │   ├── MarkerForm.vue          # 标记表单
+│   │   ├── CategoryManager.vue     # 分类管理
+│   │   └── RegionManager.vue       # 区域管理
 │   └── views/
-│       ├── HomeView.vue       # 主页（地图+侧边栏）
-│       └── NotFoundView.vue   # 404
-├── public/                    # 静态资源（构建时复制到 dist/）
-│   └── TileMap/               # 瓦片（.gitignore 排除，构建时从 gh-pages 恢复）
-├── vite.config.js             # base: '/Map_Pages/'
-└── package.json               # vue/vue-router/pinia/leaflet
+│       ├── HomeView.vue            # 主页（编排者）
+│       └── NotFoundView.vue        # 404
+├── scripts/
+│   ├── copy-tiles.js               # 构建后复制瓦片
+│   └── check-tiles.js              # 瓦片完整性检查
+└── screenshots/                    # 标记截图
 ```
 
-## 分支策略
+## 数据层（`src/data/`）
 
-| 分支 | 内容 | 说明 |
+原 300+ 行的 `loader.js` 已拆分为 6 个模块：
+
+| 模块 | 类型 | 职责 |
 |------|------|------|
-| `master` | 源码 | Vue 组件、构建配置，不含 TileMap |
-| `gh-pages` | 构建产物 | dist 目录内容（HTML+JS+CSS+数据+瓦片） |
+| `sources.js` | 异步 | fetch JSON + 内存缓存 + `BASE` URL 拼接 |
+| `storage.js` | 同步 | localStorage 读写封装 |
+| `merge.js` | 纯函数 | JSON 基准 + localStorage 修改 → 合并 |
+| `auth.js` | 异步+同步 | SHA-256 登录 |
+| `crud.js` | 同步 | 本地 CRUD（增删改写入 localStorage） |
+| `index.js` | Barrel | 统一对外 API |
 
-GitHub Pages Source 设置：`gh-pages` / `(root)`
+**核心公式**：`mergeData(jsonArr, localStorageMods)` → 最终数据
 
-## 核心改造要点
+### localStorage 存储键
 
-### 1. 路由 → Hash 模式
-`src/router/index.js`: `createWebHashHistory()` 替代 `createWebHistory()`
+| 键 | 内容 |
+|----|------|
+| `bg3_admin_auth` | `"true"` / `null` |
+| `bg3_admin_user` | `{ username:"admin", is_admin:true }` |
+| `bg3_mod_markers` | `{ additions:[], edits:{}, deletions:[] }` |
+| `bg3_mod_categories` | 同上 |
+| `bg3_mod_regions` | 同上 |
 
-### 2. 数据加载 → loader.js
-`src/data/loader.js` 是改造核心，负责：
-- `fetchJSON(BASE + path)` 加载 JSON 数据
-- localStorage 合并（localStorage 覆盖 JSON）
-- 管理员登录（SHA-256）、本地 CRUD
-- **`BASE` 变量**：`import.meta.env.BASE_URL` → 构建时替换为 `/Map_Pages/`
+## 5 个章节
 
-### 3. 瓦片处理
-- 原 PNG 瓦片 → WebP（质量 85%），171MB
-- 排除 zoom_7 级别（仅 1 张地图有，省 218MB）
-- 转换脚本：`tile_convert.py`，从 `G:\BG3_map\TileMap` 读取原图
+| 章节 | chapter key | 区域 ID |
+|------|------------|---------|
+| 序章（鹦鹉螺式魔法船） | `chapter0` | 1 |
+| 第1章（林地/地精营地/幽暗地域） | `chapter1` | 2 |
+| 第1.5章（伊雷珂养育间） | `chapter2` | 3 |
+| 第2章（幽影诅咒之地/月出之塔） | `chapter3` | 4 |
+| 第3章（博德之门） | `chapter4` | 5 |
 
-### 4. 管理员功能
-所有写入操作通过 `localStorage` 持久化：
-- `STORAGE_KEYS`: `bg3_admin_auth`, `bg3_admin_user`, `bg3_local_markers`, `bg3_local_regions`, `bg3_local_categories`
-- 标记/分类/区域增删改 → `localAdd*` / `localUpdate*` / `localDelete*`
-- 图标上传 → FileReader base64 data URL
+## 构建与部署
 
-### 5. 删除的功能
-- 用户注册/登录 → 仅保留管理员登录
-- 审核面板 → 移除 ReviewModal
-- Axios / API 调用 → 全部移除
+### 构建
 
-## 常见问题与修复
-
-### ❌ 页面空白、JS/CSS 404
-**原因**：`vite.config.js` 的 `base` 路径与 GitHub Pages 仓库名不匹配。
-**检查**：`base` 必须为 `'/Map_Pages/'`（仓库名）。
-
-### ❌ 地图无标记/数据
-**原因**：`loader.js` 中 fetch 路径缺少 `BASE` 前缀。
-**检查**：所有 `fetchJSON()` 调用都使用 `BASE + 'data/xxx.json'`。
-
-### ❌ 管理员登录后无法添加标记
-**原因**：`adminLogin()` 中对 `adminUser` 双写了 `JSON.stringify`，导致 `authStore.user` 拿到字符串而非对象。
-```js
-// 错误（已修复）
-writeLocal(STORAGE_KEYS.adminUser, JSON.stringify({...}))  // writeLocal 会再 stringify 一次
-
-// 正确
-writeLocal(STORAGE_KEYS.adminUser, {...})  // 传对象，writeLocal 内部 stringify
-```
-
-### ❌ TileMap 瓦片 404
-**原因**：瓦片未在 `dist/TileMap/` 中。
-**操作**：`git checkout gh-pages -- TileMap/` 恢复瓦片到 `public/TileMap/`，然后 `npm run build`。
-
-## 日常操作
-
-### 修改数据（标记/分类/区域）
-1. 以管理员身份登录页面
-2. 使用界面上的管理按钮操作（标记添加/编辑、分类管理、区域管理）
-3. 数据自动保存到 localStorage，刷新后仍在
-
-### 添加新地图章节
-1. 在 `G:\BG3_map\TileMap\` 中添加新章节的瓦片目录
-2. 运行 `tile_convert.py` 转换 PNG→WebP
-3. 修改 `public/data/regions.json` 添加新区块
-4. 修改 `loader.js` 中的 `CHAPTER_KEYS` 和 `CHAPTER_NAMES`
-5. 重新构建部署
-
-### 重新部署流程
 ```powershell
-# 1. 确保在 master 分支
-git checkout master
-
-# 2. 修改代码后构建
 npm run build
-
-# 3. 切换到 gh-pages（需先删除根目录 TileMap 避免冲突）
-Remove-Item TileMap -Recurse -Force
-git checkout gh-pages --force
-
-# 4. 更新构建产物
-Copy-Item dist\assets\* -Destination assets\ -Force
-Copy-Item dist\index.html -Destination index.html -Force
-
-# 5. 提交推送
-git add assets/ index.html
-git commit -m "fix: xxx"
-git push origin gh-pages
+# 1. vite build → docs/（JS/CSS/HTML/静态数据）
+# 2. node scripts/copy-tiles.js → docs/TileMap/
 ```
 
-### 恢复瓦片（从 gh-pages 拉取）
+### 部署
+
 ```powershell
-git checkout gh-pages -- TileMap/
-Move-Item TileMap public\TileMap -Force
+git add -A; git commit -m "deploy: xxx"; git push
+# GitHub Pages 从 master 分支 /docs 目录自动部署
 ```
 
-## 数据源
+GitHub Pages 设置：**Deploy from a branch** → `master` / `/docs`
 
-原始数据来自 `G:\BG3_map` 项目的 MySQL 数据库：
-- 数据库：`bg3_map`，连接：`root:root@localhost:3306`
-- 导出脚本：`export_db.py`（已被 .gitignore 排除）
-- 当前标记数：27 个（已审核）
+## 常见问题
+
+| 问题 | 原因 | 解决 |
+|------|------|------|
+| 页面空白 | `vite.config.js` 中 `base` 路径不对 | 确保 `base: '/Map_Pages/'` |
+| 地图无标记 | `public/data/markers.json` 丢失或 `BASE` 拼错 | 检查文件存在 + `sources.js` 中 fetch 路径 |
+| 瓦片 404 | `TileMap/` 未复制到 `docs/` | 检查 `npm run build` 是否执行了 `copy-tiles.js` |
+| 构建失败 `EBUSY` | Windows 文件锁（webp 被其他程序占用） | 关闭资源管理器预览/图片查看器后重试 |
+| 管理员登录后无法操作 | `adminUser` 被双重 `JSON.stringify` | 检查 `storage.js` 的 `writeAdminUser` 参数是否为对象 |
+
+## 新增章节流程
+
+1. 在 `TileMap/` 下添加新章节的瓦片目录
+2. 修改 `public/data/regions.json` 添加新区块
+3. 修改 `public/data/maps_index.json` 添加地图索引
+4. 修改 `src/data/sources.js` 的 `CHAPTER_KEYS` 和 `CHAPTER_NAMES`
+5. 重新构建部署
