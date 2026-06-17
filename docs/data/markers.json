@@ -506,7 +506,7 @@
   {
     "name": "眼魔",
     "category_id": 2,
-    "description": "掉落：训练木剑",
+    "description": "掉落：悼霜碎片",
     "x_coord": -157.0625,
     "y_coord": 160.8125,
     "screenshot": [],
@@ -520,5 +520,41 @@
     "created_at": "2026-06-17T12:07:31.522Z",
     "submitted_by": null,
     "id": 226
+  },
+  {
+    "name": "加摩尔-魔人形态",
+    "category_id": 2,
+    "description": "掉落：杀威棍",
+    "x_coord": -137.4375,
+    "y_coord": 107.09375,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-17T13:35:30.397Z",
+    "submitted_by": null,
+    "id": 227
+  },
+  {
+    "name": "鲨蜥兽",
+    "category_id": 2,
+    "description": "掉落：吸血服 迦耶伯格",
+    "x_coord": -136.28125,
+    "y_coord": 89.5,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-17T13:39:54.482Z",
+    "submitted_by": null,
+    "id": 227
   }
 ]
