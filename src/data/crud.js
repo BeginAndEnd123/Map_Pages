@@ -34,12 +34,15 @@ function getExportData() {
   const deleteSet = new Set(mod.deletions)
   return mod.additions
     .filter(m => !deleteSet.has(m.id))
-    .map(m => ({
-      ...m,
-      status: m.status || 'approved',
-      created_at: m.created_at || new Date().toISOString(),
-      submitted_by: m.submitted_by ?? null,
-    }))
+    .map(m => {
+      const { images, ...rest } = m
+      return {
+        ...rest,
+        status: rest.status || 'approved',
+        created_at: rest.created_at || new Date().toISOString(),
+        submitted_by: rest.submitted_by ?? null,
+      }
+    })
 }
 
 function resetType(type) {
