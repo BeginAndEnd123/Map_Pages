@@ -1,7 +1,7 @@
 import { readModifications, writeModifications, clearModifications } from './storage'
 
 function _nextId(items) {
-  if (items.length === 0) return 1
+  if (items.length === 0) return 0
   return Math.max(...items.map(i => i.id)) + 1
 }
 

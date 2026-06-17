@@ -1,6 +1,6 @@
 [
   {
-    "id": 13,
+    "id": 0,
     "region_id": 5,
     "category_id": 2,
     "name": "哈基风",
@@ -18,7 +18,7 @@
     "submitted_by": null
   },
   {
-    "id": 20,
+    "id": 1,
     "region_id": 2,
     "category_id": 1,
     "name": "蜘蛛洞",
@@ -36,7 +36,7 @@
     "submitted_by": null
   },
   {
-    "id": 21,
+    "id": 2,
     "region_id": 2,
     "category_id": 2,
     "name": "谜语人",
@@ -54,7 +54,7 @@
     "submitted_by": null
   },
   {
-    "id": 22,
+    "id": 3,
     "region_id": 2,
     "category_id": 2,
     "name": "鱼人小队",
@@ -72,7 +72,7 @@
     "submitted_by": null
   },
   {
-    "id": 23,
+    "id": 4,
     "region_id": 2,
     "category_id": 2,
     "name": "大手",
@@ -90,7 +90,7 @@
     "submitted_by": null
   },
   {
-    "id": 24,
+    "id": 5,
     "region_id": 2,
     "category_id": 2,
     "name": "小沙",
@@ -108,7 +108,7 @@
     "submitted_by": null
   },
   {
-    "id": 25,
+    "id": 6,
     "region_id": 2,
     "category_id": 3,
     "name": "终焉轻语",
@@ -126,7 +126,7 @@
     "submitted_by": null
   },
   {
-    "id": 26,
+    "id": 7,
     "region_id": 2,
     "category_id": 2,
     "name": "大树守卫",
@@ -144,7 +144,7 @@
     "submitted_by": null
   },
   {
-    "id": 27,
+    "id": 8,
     "region_id": 2,
     "category_id": 2,
     "name": "战争重锤",
@@ -162,7 +162,7 @@
     "submitted_by": null
   },
   {
-    "id": 28,
+    "id": 9,
     "region_id": 2,
     "category_id": 2,
     "name": "座狼与神射手",
@@ -180,7 +180,7 @@
     "submitted_by": null
   },
   {
-    "id": 29,
+    "id": 10,
     "region_id": 2,
     "category_id": 2,
     "name": "假圣骑士",
@@ -198,7 +198,7 @@
     "submitted_by": null
   },
   {
-    "id": 30,
+    "id": 11,
     "region_id": 2,
     "category_id": 2,
     "name": "豺狼人督军",
@@ -216,7 +216,7 @@
     "submitted_by": null
   },
   {
-    "id": 31,
+    "id": 12,
     "region_id": 2,
     "category_id": 2,
     "name": "混乱青蛙",
@@ -234,7 +234,7 @@
     "submitted_by": null
   },
   {
-    "id": 33,
+    "id": 13,
     "region_id": 2,
     "category_id": 2,
     "name": "盗墓团伙",
@@ -252,7 +252,7 @@
     "submitted_by": null
   },
   {
-    "id": 34,
+    "id": 14,
     "region_id": 2,
     "category_id": 2,
     "name": "吸血鬼猎人",
@@ -270,13 +270,13 @@
     "submitted_by": null
   },
   {
-    "id": 35,
+    "id": 15,
     "region_id": 5,
     "category_id": 2,
     "name": "哈基土",
     "description": "",
     "x_coord": -61.38,
-    "y_coord": 121.0,
+    "y_coord": 121,
     "screenshot": [],
     "created_at": "2026-06-04T14:56:50",
     "map_name": "飞龙关",
@@ -288,7 +288,7 @@
     "submitted_by": null
   },
   {
-    "id": 36,
+    "id": 16,
     "region_id": 5,
     "category_id": 2,
     "name": "哈基冰",
@@ -306,7 +306,7 @@
     "submitted_by": null
   },
   {
-    "id": 37,
+    "id": 17,
     "region_id": 5,
     "category_id": 2,
     "name": "哈基火",
@@ -324,7 +324,7 @@
     "submitted_by": null
   },
   {
-    "id": 38,
+    "id": 18,
     "region_id": 4,
     "category_id": 2,
     "name": "大树精",
@@ -342,7 +342,7 @@
     "submitted_by": null
   },
   {
-    "id": 39,
+    "id": 19,
     "region_id": 4,
     "category_id": 2,
     "name": "大金牛",
@@ -360,7 +360,7 @@
     "submitted_by": null
   },
   {
-    "id": 40,
+    "id": 20,
     "region_id": 4,
     "category_id": 2,
     "name": "龙骑士",
@@ -378,7 +378,7 @@
     "submitted_by": null
   },
   {
-    "id": 41,
+    "id": 21,
     "region_id": 4,
     "category_id": 3,
     "name": "咒影冥孤",
@@ -396,7 +396,7 @@
     "submitted_by": null
   },
   {
-    "id": 42,
+    "id": 22,
     "region_id": 4,
     "category_id": 3,
     "name": "金色天际线",
@@ -414,7 +414,7 @@
     "submitted_by": null
   },
   {
-    "id": 51,
+    "id": 23,
     "region_id": 2,
     "category_id": 1,
     "name": "低语深地",
@@ -432,7 +432,7 @@
     "submitted_by": null
   },
   {
-    "id": 52,
+    "id": 24,
     "region_id": 2,
     "category_id": 2,
     "name": "蜘蛛女王",
@@ -450,10 +450,10 @@
     "submitted_by": null
   },
   {
-    "id": 63,
+    "id": 25,
     "region_id": 1,
     "category_id": 3,
-    "name": "疾步之靴",
+    "name": "迅捷之靴",
     "description": "",
     "x_coord": -125.28,
     "y_coord": 87.19,
@@ -468,7 +468,7 @@
     "submitted_by": null
   },
   {
-    "id": 225,
+    "id": 26,
     "region_id": 2,
     "category_id": 2,
     "name": "失控的钢铁卫士",
@@ -496,9 +496,11 @@
     "target_x": null,
     "target_y": null,
     "region_id": 1,
-    "screenshot": ["screenshots/127320002_p0.png"],
+    "screenshot": [
+      "screenshots/127320002_p0.png"
+    ],
     "map_name": "鹦鹉螺式魔法船（第一层）",
-    "id": 230,
+    "id": 27,
     "status": "approved",
     "submitted_by": null,
     "created_at": "2026-06-16T12:49:49.578Z"
@@ -519,7 +521,7 @@
     "status": "approved",
     "created_at": "2026-06-17T12:07:31.522Z",
     "submitted_by": null,
-    "id": 226
+    "id": 28
   },
   {
     "name": "加摩尔-魔人形态",
@@ -537,7 +539,7 @@
     "status": "approved",
     "created_at": "2026-06-17T13:35:30.397Z",
     "submitted_by": null,
-    "id": 227
+    "id": 29
   },
   {
     "name": "鲨蜥兽",
@@ -555,6 +557,132 @@
     "status": "approved",
     "created_at": "2026-06-17T13:39:54.482Z",
     "submitted_by": null,
-    "id": 227
+    "id": 30
+  },
+  {
+    "name": "日之呼吸",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -82.6875,
+    "y_coord": 95,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-17T14:50:13.716Z",
+    "submitted_by": null,
+    "id": 31
+  },
+  {
+    "name": "让",
+    "category_id": 2,
+    "description": "掉落：湛光之刺",
+    "x_coord": -146.5,
+    "y_coord": 172.125,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "瘟疫村落中的木质活板门（地窖）",
+    "status": "approved",
+    "created_at": "2026-06-17T14:52:38.724Z",
+    "submitted_by": null,
+    "id": 32
+  },
+  {
+    "name": "灼魂之衣",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -96.25,
+    "y_coord": 128.75,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "隐藏金库",
+    "status": "approved",
+    "created_at": "2026-06-17T14:55:04.352Z",
+    "submitted_by": null,
+    "id": 33
+  },
+  {
+    "name": "鬼婆",
+    "category_id": 2,
+    "description": "掉落：吸血手套（鬼婆求饶追加选项）",
+    "x_coord": -145.1875,
+    "y_coord": 83.6875,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "蔓生地道",
+    "status": "approved",
+    "created_at": "2026-06-17T14:56:29.914Z",
+    "submitted_by": null,
+    "id": 34
+  },
+  {
+    "name": "精金武器（修改）",
+    "category_id": 3,
+    "description": "被加强过的精金武器",
+    "x_coord": -178.625,
+    "y_coord": 153.75,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "精金熔炉（下层）",
+    "status": "approved",
+    "created_at": "2026-06-17T14:58:03.388Z",
+    "submitted_by": null,
+    "id": 35
+  },
+  {
+    "name": "熔岩怪",
+    "category_id": 2,
+    "description": "掉落：垃圾",
+    "x_coord": -178.6875,
+    "y_coord": 127.875,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "精金熔炉（下层）",
+    "status": "approved",
+    "created_at": "2026-06-17T14:58:33.838Z",
+    "submitted_by": null,
+    "id": 36
+  },
+  {
+    "name": "龙觉者大剑",
+    "category_id": 3,
+    "description": "还鞋子任务追加奖励",
+    "x_coord": -137.90625,
+    "y_coord": 120.8125,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "精金熔炉（下层）",
+    "status": "approved",
+    "created_at": "2026-06-17T14:59:58.642Z",
+    "submitted_by": null,
+    "id": 37
   }
 ]
