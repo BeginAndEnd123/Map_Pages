@@ -78,9 +78,7 @@
       </div>
     </div>
 
-    <button class="add-btn" @click="$emit('start-add')">
-      {{ isAdmin ? '新增标记' : '管理员登录后可添加' }}
-    </button>
+    <button v-if="isAdmin" class="add-btn" @click="$emit('start-add')">新增标记</button>
 
     <button v-if="isAdmin" class="export-btn" @click="$emit('export-markers')">导出本地标记</button>
 
