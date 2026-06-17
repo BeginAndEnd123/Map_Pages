@@ -6,6 +6,7 @@ export {
   readAdminUser,
   clearAdmin,
   clearAll,
+  clearModifications,
 } from './storage'
 
 export {

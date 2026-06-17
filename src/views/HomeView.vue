@@ -100,7 +100,7 @@ import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useMapStore } from '../stores/map'
 import { useAuthStore } from '../stores/auth'
 import { useSidebar } from '../composables/useSidebar'
-import { getExportData, clearAll, clearCaches } from '../data/index'
+import { getExportData, clearAll, clearCaches, clearModifications } from '../data/index'
 import SidePanel from '../components/SidePanel.vue'
 import MapContainer from '../components/MapContainer.vue'
 import MarkerPopup from '../components/MarkerPopup.vue'
@@ -266,7 +266,7 @@ function onFormClose() {
   pick.reset()
 }
 
-function onExportMarkers() {
+async function onExportMarkers() {
   const markers = getExportData()
   if (markers.length === 0) {
     alert('没有可导出的本地标记')
@@ -280,6 +280,10 @@ function onExportMarkers() {
   a.download = `bg3_local_markers_${new Date().toISOString().slice(0, 10)}.json`
   a.click()
   URL.revokeObjectURL(url)
+  clearModifications('markers')
+  clearCaches()
+  await nav.loadMarkers()
+  recent.fetchRecentMarkers()
 }
 
 async function onClearData() {
