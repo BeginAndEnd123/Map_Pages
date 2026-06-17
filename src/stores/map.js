@@ -92,9 +92,10 @@ export const useMapStore = defineStore('map', () => {
   }
 
   async function addMarker(data) {
+    data.status = 'approved'
+    data.created_at = data.created_at || new Date().toISOString()
+    data.submitted_by = data.submitted_by ?? null
     const item = addItem('markers', data, markers.value)
-    item.status = item.status || 'approved'
-    item.created_at = item.created_at || new Date().toISOString()
     markers.value = [...markers.value, item]
     return item
   }
