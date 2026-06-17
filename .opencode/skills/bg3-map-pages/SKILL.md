@@ -75,7 +75,8 @@ G:\Map_Pages\                       # 部署仓库（master 单分支）
 │       └── NotFoundView.vue        # 404
 ├── scripts/
 │   ├── copy-tiles.js               # 构建后复制瓦片
-│   └── check-tiles.js              # 瓦片完整性检查
+│   ├── check-tiles.js              # 源瓦片完整性检查
+│   └── verify-deploy.js            # ★ 部署前审查 — 检查 docs/ 完整性
 └── screenshots/                    # 标记截图
 ```
 
@@ -116,19 +117,56 @@ G:\Map_Pages\                       # 部署仓库（master 单分支）
 
 ## 构建与部署
 
-### 构建
+### 重要：Windows PowerShell 5.1 不支持 `&&`
+
+`package.json` 的 build 脚本必须使用 PowerShell 兼容的分号+条件语法：
+
+```json
+"build": "vite build; if ($?) { node scripts/copy-tiles.js }"
+```
+
+> 如果使用 `&&`，在 PowerShell 5.1 中 `&&` 后面的 `copy-tiles.js` 不会执行，导致 `docs/TileMap/` 缺失——地图瓦片全部 404，但标记仍正常渲染。
+
+### 构建（必须完整执行两步）
 
 ```powershell
 npm run build
-# 1. vite build → docs/（JS/CSS/HTML/静态数据）
-# 2. node scripts/copy-tiles.js → docs/TileMap/
+# 1. vite build → docs/（JS/CSS/HTML + public/ 下静态资源）
+# 2. node scripts/copy-tiles.js → docs/TileMap/（~171MB WebP 瓦片）
 ```
 
-### 部署
+构建成功标志：`docs/TileMap/` 目录存在且有 `chapter0/` ~ `chapter4/` 子目录。
+
+### 部署前审查（必须通过！）
+
+**推送前必须运行审查脚本：**
 
 ```powershell
-git add -A; git commit -m "deploy: xxx"; git push
-# GitHub Pages 从 master 分支 /docs 目录自动部署
+npm run verify
+# 等价于: node scripts/verify-deploy.js
+```
+
+审查内容：
+1. `docs/index.html` 和 `docs/assets/` 存在
+2. `docs/data/` 下 4 个 JSON 文件存在且可解析
+3. `docs/TileMap/` 目录存在
+4. 对比 `maps_index.json` 检查 97 张地图瓦片完整性
+5. `docs/icons/` 和 `docs/screenshots/` 存在
+
+**审查不通过则禁止推送。** 审查通过输出 `审查通过 — 可以安全推送`。
+
+### 完整部署流程
+
+```powershell
+# 1. 修改源码（public/data/ 标记数据等）
+# 2. 构建
+npm run build
+# 3. 审查（不通过则回到步骤 2 修复）
+npm run verify
+# 4. 推送（仅审查通过后）
+git add docs/ package.json package-lock.json
+git commit -m "deploy: 描述本次变更"
+git push
 ```
 
 GitHub Pages 设置：**Deploy from a branch** → `master` / `/docs`
@@ -139,7 +177,8 @@ GitHub Pages 设置：**Deploy from a branch** → `master` / `/docs`
 |------|------|------|
 | 页面空白 | `vite.config.js` 中 `base` 路径不对 | 确保 `base: '/Map_Pages/'` |
 | 地图无标记 | `public/data/markers.json` 丢失或 `BASE` 拼错 | 检查文件存在 + `sources.js` 中 fetch 路径 |
-| 瓦片 404 | `TileMap/` 未复制到 `docs/` | 检查 `npm run build` 是否执行了 `copy-tiles.js` |
+| **标记正常但瓦片 404** | `docs/TileMap/` 缺失 — `copy-tiles.js` 未执行 | 运行 `node scripts/copy-tiles.js`；检查 build 脚本是否使用 `; if ($?)` 而非 `&&` |
+| `npm run build` 后瓦片未复制 | PowerShell 5.1 不支持 `&&` 语法 | 确保 build 脚本为 `"vite build; if ($?) { node scripts/copy-tiles.js }"` |
 | 构建失败 `EBUSY` | Windows 文件锁（webp 被其他程序占用） | 关闭资源管理器预览/图片查看器后重试 |
 | 管理员登录后无法操作 | `adminUser` 被双重 `JSON.stringify` | 检查 `storage.js` 的 `writeAdminUser` 参数是否为对象 |
 
