@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build; if ($?) { node scripts/copy-tiles.js }",
+    "build": "node scripts/build.js",
     "verify": "node scripts/verify-deploy.js",
     "preview": "vite preview"
   },

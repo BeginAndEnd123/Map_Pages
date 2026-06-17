@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     outDir: 'docs',
-    emptyOutDir: true,
+    emptyOutDir: false,
   },
   server: {
     port: 5173,
