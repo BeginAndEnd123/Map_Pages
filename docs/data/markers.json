@@ -828,5 +828,23 @@
     "created_at": "2026-06-17T18:26:08.115Z",
     "submitted_by": null,
     "id": 45
+  },
+  {
+    "name": "生离死别",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -131.953125,
+    "y_coord": 158.953125,
+    "screenshot": ["screenshots/生离死别.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-17T18:38:32.727Z",
+    "submitted_by": null,
+    "id": 46
   }
 ]
