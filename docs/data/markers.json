@@ -829,5 +829,23 @@
     "created_at": "2026-06-17T18:41:35.592Z",
     "submitted_by": null,
     "id": 48
+  },
+  {
+    "name": "养鸡人军需官",
+    "category_id": 4,
+    "description": "售卖：",
+    "x_coord": -192.0625,
+    "y_coord": 158.68372722867687,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 3,
+    "map_name": "伊雷珂养育间",
+    "status": "approved",
+    "created_at": "2026-06-18T02:59:26.066Z",
+    "submitted_by": null,
+    "id": 49
   }
 ]
