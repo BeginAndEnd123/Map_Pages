@@ -22,7 +22,7 @@
     "region_id": 2,
     "category_id": 2,
     "name": "谜语人",
-    "description": "掉落:巨阙 巴洛炎魔的火焰披风\n超雄独狼",
+    "description": "掉落:巨阙 巴洛炎魔的火焰披风\n备注:超雄独狼",
     "x_coord": -141.03,
     "y_coord": 143.69,
     "screenshot": ["screenshots/巨阙.jpg","screenshots/巴洛炎魔的火焰披风.jpg"],
@@ -1033,5 +1033,23 @@
     "created_at": "2026-06-18T06:29:57.494Z",
     "submitted_by": null,
     "id": 59
+  },
+  {
+    "name": "血族之杖",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -117.21875,
+    "y_coord": 95.0290296433361,
+    "screenshot": ["screenshots/血族之杖.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-18T06:38:41.169Z",
+    "submitted_by": null,
+    "id": 60
   }
 ]
