@@ -986,7 +986,7 @@
     "description": "掉落：咒符“破魔令”",
     "x_coord": -87.3125,
     "y_coord": 127.61939222316951,
-    "screenshot": ["咒符“破魔令”"],
+    "screenshot": ["screenshots/咒符“破魔令”.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
