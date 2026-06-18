@@ -818,7 +818,11 @@
     "description": "售卖：坚韧披风 因笼羽织 疗愈斗篷 斩甲短剑 斩甲重剑",
     "x_coord": -106.453125,
     "y_coord": 153.140625,
-    "screenshot": ["screenshots/坚韧披风.jpg","screenshots/因笼羽织.jpg","screenshots/疗愈斗篷.jpg","screenshots/斩甲短剑.jpg","screenshots/斩甲重剑.jpg"],
+    "screenshot": ["screenshots/坚韧披风.jpg",
+                    "screenshots/因笼羽织.jpg",
+                    "screenshots/疗愈斗篷.jpg",
+                    "screenshots/斩甲短剑.jpg",
+                    "screenshots/斩甲重剑.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -957,5 +961,23 @@
     "created_at": "2026-06-18T06:03:23.908Z",
     "submitted_by": null,
     "id": 55
+  },
+  {
+    "name": "野猪之牙",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -98.5,
+    "y_coord": 142.95502034500373,
+    "screenshot": ["screenshots/野猪之牙.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "隐藏金库",
+    "status": "approved",
+    "created_at": "2026-06-18T06:11:34.589Z",
+    "submitted_by": null,
+    "id": 34
   }
 ]
