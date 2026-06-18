@@ -1073,10 +1073,10 @@
   {
     "name": "熊地精商人",
     "category_id": 4,
-    "description": "售卖：血吼",
+    "description": "售卖：血吼 无畏者披风",
     "x_coord": -197.140625,
     "y_coord": 83.390625,
-    "screenshot": ["screenshots/血吼.jpg"],
+    "screenshot": ["screenshots/血吼.jpg","screenshots/无畏者披风.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -1091,10 +1091,10 @@
   {
     "name": "罗阿月光（第二章）",
     "category_id": 4,
-    "description": "售卖：",
+    "description": "售卖：元素附魔短笛",
     "x_coord": -197.96875,
     "y_coord": 82.34375,
-    "screenshot": [],
+    "screenshot": ["screenshots/元素附魔短笛.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -1109,7 +1109,7 @@
   {
     "name": "复仇侍卫",
     "category_id": 2,
-    "description": "掉落：巴尔血誓 神秘之剑",
+    "description": "掉落：巴尔血誓 神秘之剑\n备注:精金守卫",
     "x_coord": -172.90625,
     "y_coord": 158.875,
     "screenshot": ["screenshots/巴尔血誓.jpg","screenshots/神秘之剑.jpg"],
@@ -1179,7 +1179,7 @@
     "id": 67
   },
   {
-    "name": "大师武器（增强）",
+    "name": "大师/轻语武器（增强）",
     "category_id": 3,
     "description": "",
     "x_coord": -135.875,
@@ -1305,7 +1305,7 @@
     "id": 74
   },
   {
-    "name": "瓦罗",
+    "name": "瓦罗（第一章）",
     "category_id": 4,
     "description": "售卖：讥讽者轻甲 舞者项链",
     "x_coord": -107.890625,
