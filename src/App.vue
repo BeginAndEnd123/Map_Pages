@@ -37,7 +37,7 @@ onMounted(() => {
 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body, #app, #map-app { width: 100%; height: 100%; }
+html, body, #app, #map-app { width: 100%; height: 100%; height: 100dvh; }
 #map-app { display: flex; flex-direction: column; }
 
 .global-error-overlay {

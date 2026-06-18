@@ -68,7 +68,7 @@
       </div>
 
       <div class="pick-overlay" v-if="pick.pickMode.value">
-        <div class="pick-hint">点击地图放置标记，拖动微调位置</div>
+        <div class="pick-hint">{{ isMobile() ? '轻触地图放置标记，按住拖动微调' : '点击地图放置标记，拖动微调位置' }}</div>
         <button class="confirm-btn" @click="onConfirmPick">确认位置</button>
       </div>
     </div>
@@ -122,6 +122,8 @@ const selectedMarker = ref(null)
 const selectedCategoryIds = ref([])
 const sidebarOpen = computed(() => sidebar.sidebarOpen.value)
 
+function isMobile() { return window.innerWidth <= 768 }
+
 watch(() => mapStore.categories, (cats) => {
   if (cats.length > 0 && selectedCategoryIds.value.length === 0) {
     selectedCategoryIds.value = cats.map(c => c.id)
@@ -171,6 +173,7 @@ function onSearchClick(marker) {
   selectedMarker.value = search.onSearchSelect(marker,
     (rid, mn, x, y) => nav.switchToRegion(rid, mn, x, y, mapRef)
   )
+  if (isMobile()) sidebar.closeSidebar()
 }
 
 function onRecentClick(marker) {
@@ -186,6 +189,7 @@ let isClicked = false
 const hoverPosition = ref({ left: '0px', top: '0px' })
 
 async function onRecentHover(marker, event) {
+  if (isMobile()) return
   if (hoverLeaveTimer) { clearTimeout(hoverLeaveTimer); hoverLeaveTimer = null }
   isClicked = false
   hoverPreviewMarker = marker
@@ -305,12 +309,14 @@ async function onClearData() {
 async function onRegionChange(regionId) {
   nav.currentRegionId.value = regionId
   search.keyword.value = ''
+  if (isMobile()) sidebar.closeSidebar()
   await nav.onRegionChange(() => mapRef.value?.resetView())
 }
 
 async function onMapChange(mapName) {
   nav.selectedMapName.value = mapName
   search.keyword.value = ''
+  if (isMobile()) sidebar.closeSidebar()
   mapRef.value?.resetView()
   await nav.onMapChange()
 }
@@ -385,6 +391,6 @@ onBeforeUnmount(() => {
     display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 350;
   }
   .pick-hint { font-size: 12px; padding: 6px 16px; }
-  .confirm-btn { font-size: 13px; padding: 8px 24px; }
+  .confirm-btn { font-size: 15px; padding: 12px 40px; }
 }
 </style>

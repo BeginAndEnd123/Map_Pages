@@ -53,6 +53,7 @@ function onLogout() {
 .navbar {
   display: flex; align-items: center; justify-content: space-between;
   height: 46px; padding: 0 12px;
+  padding-top: env(safe-area-inset-top);
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 1px 12px rgba(0,0,0,0.3);

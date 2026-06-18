@@ -40,8 +40,9 @@ onBeforeUnmount(() => {
 
 @media (max-width: 768px) {
   .side-panel {
-    position: fixed; left: 0; top: 44px; bottom: 0; z-index: 400;
+    position: fixed; left: 0; top: calc(44px + env(safe-area-inset-top)); bottom: 0; z-index: 400;
     width: 280px; min-width: 280px;
+    padding-bottom: env(safe-area-inset-bottom);
     transform: translateX(-100%);
   }
   .side-panel.open { transform: translateX(0); }

@@ -1,7 +1,7 @@
 <template>
   <div class="marker-overlay" :class="{ transparent: transparent }" v-if="marker" @click.self="onOverlayClose" @keydown.escape="onOverlayClose">
     <div class="marker-card" :class="{ floating: transparent }" ref="card" :style="cardStyle" role="dialog" aria-modal="true" :aria-label="marker.name">
-      <div class="popup-header" @mousedown="onDragStart">
+      <div class="popup-header" @mousedown="onDragStart" @touchstart="onDragStart">
         <h3>{{ marker.name }}</h3>
         <button class="close-btn" @click="$emit('close')" aria-label="关闭">&times;</button>
       </div>
@@ -70,20 +70,32 @@ watch(() => props.position, (pos) => {
   }
 }, { deep: true, immediate: true })
 
+function _getPos(e) {
+  if (e.touches && e.touches.length > 0) return { x: e.touches[0].clientX, y: e.touches[0].clientY }
+  if (e.changedTouches && e.changedTouches.length > 0) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY }
+  return { x: e.clientX, y: e.clientY }
+}
+
 function onDragStart(e) {
   if (e.target.closest('button')) return
+  if (window.innerWidth <= 768) return
   e.preventDefault()
   dragging.value = true
-  startX = e.clientX - offset.x
-  startY = e.clientY - offset.y
+  const pos = _getPos(e)
+  startX = pos.x - offset.x
+  startY = pos.y - offset.y
   document.addEventListener('mousemove', onDragMove)
   document.addEventListener('mouseup', onDragEnd)
+  document.addEventListener('touchmove', onDragMove, { passive: false })
+  document.addEventListener('touchend', onDragEnd)
 }
 
 function onDragMove(e) {
   if (!dragging.value) return
-  offset.x = e.clientX - startX
-  offset.y = e.clientY - startY
+  e.preventDefault()
+  const pos = _getPos(e)
+  offset.x = pos.x - startX
+  offset.y = pos.y - startY
   cardStyle.value = { transform: `translate(${offset.x}px, ${offset.y}px)` }
 }
 
@@ -91,6 +103,8 @@ function onDragEnd() {
   dragging.value = false
   document.removeEventListener('mousemove', onDragMove)
   document.removeEventListener('mouseup', onDragEnd)
+  document.removeEventListener('touchmove', onDragMove)
+  document.removeEventListener('touchend', onDragEnd)
 }
 
 function onOverlayClose() {
@@ -101,6 +115,8 @@ function onOverlayClose() {
 onBeforeUnmount(() => {
   document.removeEventListener('mousemove', onDragMove)
   document.removeEventListener('mouseup', onDragEnd)
+  document.removeEventListener('touchmove', onDragMove)
+  document.removeEventListener('touchend', onDragEnd)
 })
 </script>
 
@@ -169,8 +185,17 @@ onBeforeUnmount(() => {
 .action-bar :deep(.action-btn.teleport):hover { opacity: 0.85; }
 
 @media (max-width: 768px) {
-  .marker-card { max-width: 100%; width: 100%; border-radius: 0; padding: 16px; }
+  .marker-overlay { align-items: flex-end; }
+  .marker-card {
+    max-width: 100%; width: 100%; border-radius: 12px 12px 0 0;
+    padding: 16px; max-height: 60vh; overflow-y: auto;
+    animation: slideUp 0.25s ease;
+  }
   .marker-card h3 { font-size: 15px; }
   .screenshot { width: 100% !important; height: 120px; }
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
 </style>

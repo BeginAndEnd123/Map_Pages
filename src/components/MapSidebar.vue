@@ -279,4 +279,18 @@ h3 {
 .clear-data-btn:hover {
   background: rgba(255,80,80,0.15); border-color: rgba(255,80,80,0.6); color: #ff6666;
 }
+
+@media (max-width: 768px) {
+  .category-item { min-height: 36px; padding: 6px 6px; }
+  .category-item input[type="checkbox"] { width: 18px; height: 18px; }
+  .search-list li { padding: 10px; min-height: 40px; }
+  .recent-markers ul { height: auto; max-height: 160px; overflow-y: auto; }
+  .recent-markers li { min-height: 36px; padding: 6px 4px; }
+  .page-row button { min-width: 32px; height: 32px; font-size: 13px; }
+  .page-goto input { height: 30px; font-size: 13px; }
+  .page-goto button { min-width: 36px; height: 30px; font-size: 12px; }
+  .add-btn, .export-btn, .clear-data-btn, .category-manage-btn { padding: 10px 12px; font-size: 13px; }
+  .region-select select, .map-select select { padding: 10px; }
+  .search-box input { padding: 10px; }
+}
 </style>

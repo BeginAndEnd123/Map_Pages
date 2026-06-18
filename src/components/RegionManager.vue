@@ -1,7 +1,7 @@
 <template>
   <div class="overlay" v-if="visible" @click.self="onOverlayClose" @keydown.escape="onOverlayClose">
     <div class="card" ref="card" :style="cardStyle" role="dialog" aria-modal="true" aria-label="区域管理">
-      <div class="card-header" @mousedown="onDragStart">
+      <div class="card-header" @mousedown="onDragStart" @touchstart="onDragStart">
         <h3>区域管理</h3>
         <button class="close-btn" @click="$emit('close')" aria-label="关闭">&times;</button>
       </div>
@@ -38,9 +38,10 @@
 </template>
 
 <script setup>
-import { ref, reactive, onBeforeUnmount } from 'vue'
+import { ref, reactive } from 'vue'
 import { addItem, updateItem, deleteItem } from '../data/index'
 import { useMapStore } from '../stores/map'
+import { useDraggable } from '../composables/useDraggable'
 
 const props = defineProps({
   visible: { type: Boolean, default: false },
@@ -109,38 +110,7 @@ async function onDelete(r) {
 }
 
 const card = ref(null)
-const cardStyle = ref({})
-const dragging = ref(false)
-const offset = reactive({ x: 0, y: 0 })
-let startX = 0, startY = 0
-
-function onDragStart(e) {
-  if (e.target.closest('button') || e.target.closest('input') || e.target.closest('select')) return
-  e.preventDefault()
-  dragging.value = true
-  startX = e.clientX - offset.x
-  startY = e.clientY - offset.y
-  document.addEventListener('mousemove', onDragMove)
-  document.addEventListener('mouseup', onDragEnd)
-}
-
-function onDragMove(e) {
-  if (!dragging.value) return
-  offset.x = e.clientX - startX
-  offset.y = e.clientY - startY
-  cardStyle.value = { transform: `translate(${offset.x}px, ${offset.y}px)` }
-}
-
-function onDragEnd() {
-  dragging.value = false
-  document.removeEventListener('mousemove', onDragMove)
-  document.removeEventListener('mouseup', onDragEnd)
-}
-
-onBeforeUnmount(() => {
-  document.removeEventListener('mousemove', onDragMove)
-  document.removeEventListener('mouseup', onDragEnd)
-})
+const { cardStyle, dragging, onDragStart, onDragEnd } = useDraggable()
 </script>
 
 <style scoped>
