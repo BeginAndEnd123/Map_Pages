@@ -1069,5 +1069,41 @@
     "created_at": "2026-06-18T06:47:19.468Z",
     "submitted_by": null,
     "id": 61
+  },
+  {
+    "name": "熊地精商人",
+    "category_id": 4,
+    "description": "售卖：血吼",
+    "x_coord": -197.140625,
+    "y_coord": 83.390625,
+    "screenshot": ["screenshots/血吼.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-18T11:36:08.664Z",
+    "submitted_by": null,
+    "id": 51
+  },
+  {
+    "name": "罗阿月光（第二章）",
+    "category_id": 4,
+    "description": "售卖：",
+    "x_coord": -197.96875,
+    "y_coord": 82.34375,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-18T11:36:38.446Z",
+    "submitted_by": null,
+    "id": 52
   }
 ]
