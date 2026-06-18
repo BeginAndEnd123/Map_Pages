@@ -416,9 +416,9 @@
   {
     "id": 25,
     "region_id": 1,
-    "category_id": 3,
-    "name": "迅捷之靴",
-    "description": "",
+    "category_id": 2,
+    "name": "指挥官",
+    "description": "掉落:迅捷之靴 永燃大剑",
     "x_coord": -125.28,
     "y_coord": 87.19,
     "screenshot": ["screenshots/迅捷之靴.jpg"],
