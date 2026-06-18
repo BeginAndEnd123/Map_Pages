@@ -725,10 +725,10 @@
   {
     "name": "往日之影",
     "category_id": 2,
-    "description": "掉落：斩矛 霄云触（都是完成任务的额外奖励，击杀无法获取）",
+    "description": "掉落：斩矛 霄云触 风暴狂涌（都是完成任务的额外奖励，击杀无法获取）",
     "x_coord": -80.71875,
     "y_coord": 209.78125,
-    "screenshot": ["screenshots/斩矛.jpg","screenshots/霄云触.jpg"],
+    "screenshot": ["screenshots/斩矛.jpg","screenshots/霄云触.jpg","screenshots/风暴狂涌.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
