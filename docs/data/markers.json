@@ -1195,5 +1195,23 @@
     "created_at": "2026-06-18T11:52:51.694Z",
     "submitted_by": null,
     "id": 68
+  },
+  {
+    "name": "罗阿月光（第一章）",
+    "category_id": 4,
+    "description": "售卖：",
+    "x_coord": -154.875,
+    "y_coord": 105.3125,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "破碎圣所（下层）",
+    "status": "approved",
+    "created_at": "2026-06-18T11:58:51.733Z",
+    "submitted_by": null,
+    "id": 69
   }
 ]
