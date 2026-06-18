@@ -7,3 +7,4 @@ export_db.py
 tile_convert.py
 .DS_Store
 Thumbs.db
+*.md
