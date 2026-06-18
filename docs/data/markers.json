@@ -524,12 +524,12 @@
     "id": 30
   },
   {
-    "name": "日之呼吸",
+    "name": "日轮刀",
     "category_id": 3,
     "description": "",
     "x_coord": -82.6875,
     "y_coord": 95,
-    "screenshot": [],
+    "screenshot": ["screenshots/日轮刀.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -560,12 +560,12 @@
     "id": 32
   },
   {
-    "name": "灼魂之衣",
+    "name": "灼魂战衣",
     "category_id": 3,
-    "description": "",
+    "description": "备注:火之神神乐为日轮刀的装备技能 \n无极斩为战士子职剑圣的职业资源",
     "x_coord": -96.25,
     "y_coord": 128.75,
-    "screenshot": [],
+    "screenshot": ["screenshots/灼魂战衣.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -815,10 +815,10 @@
   {
     "name": "阿尔肯",
     "category_id": 4,
-    "description": "售卖：坚韧披风 因笼羽织",
+    "description": "售卖：坚韧披风 因笼羽织 疗愈斗篷",
     "x_coord": -106.453125,
     "y_coord": 153.140625,
-    "screenshot": ["screenshots/坚韧披风.jpg","screenshots/因笼羽织.jpg"],
+    "screenshot": ["screenshots/坚韧披风.jpg","screenshots/因笼羽织.jpg","screenshots/疗愈斗篷.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -871,10 +871,10 @@
   {
     "name": "大地精商人",
     "category_id": 4,
-    "description": "售卖：",
+    "description": "售卖：镜莲华",
     "x_coord": -87.15625,
     "y_coord": 156.33803212283908,
-    "screenshot": [],
+    "screenshot": ["screenshots/镜莲华.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -907,10 +907,10 @@
   {
     "name": "蕈人村半身人商人",
     "category_id": 4,
-    "description": "售卖：",
+    "description": "售卖：蹂躏之靴 冲刺之靴",
     "x_coord": -89.40625,
     "y_coord": 130.1833602275754,
-    "screenshot": [],
+    "screenshot": ["screenshots/蹂躏之靴.jpg","screenshots/冲刺之靴.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -921,5 +921,23 @@
     "created_at": "2026-06-18T05:44:01.948Z",
     "submitted_by": null,
     "id": 53
+  },
+  {
+    "name": "食人魔三兄弟",
+    "category_id": 2,
+    "description": "掉落：诸神之嘱",
+    "x_coord": -140.53125,
+    "y_coord": 109.57626797442656,
+    "screenshot": ["screenshots/诸神之嘱.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-18T05:49:33.994Z",
+    "submitted_by": null,
+    "id": 54
   }
 ]
