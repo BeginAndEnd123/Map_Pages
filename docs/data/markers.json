@@ -1411,5 +1411,26 @@
     "created_at": "2026-06-18T15:29:34.373Z",
     "submitted_by": null,
     "id": 79
+  },
+  {
+    "name": "利文顿商人",
+    "category_id": 4,
+    "description": "售卖：光之巨人の光剑 塞伦涅的拥抱 灵魂挽歌 鞭刑杖",
+    "x_coord": -196.65625,
+    "y_coord": 175.375,
+    "screenshot": ["screenshots/光之巨人の光剑.jpg",
+                    "screenshots/塞伦涅的拥抱.jpg",
+                    "screenshots/灵魂挽歌.jpg",
+                    "screenshots/鞭刑杖.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 5,
+    "map_name": "飞龙关",
+    "status": "approved",
+    "created_at": "2026-06-18T15:59:43.029Z",
+    "submitted_by": null,
+    "id": 18
   }
 ]
