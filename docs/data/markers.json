@@ -650,12 +650,12 @@
     "id": 37
   },
   {
-    "name": "光耀会商人",
+    "name": "埃斯特女士",
     "category_id": 4,
-    "description": "售卖：禅宗木杖 气云衫 \n备注：超雄独狼商人",
+    "description": "售卖：气云衫 牢大的盾\n备注：超雄独狼商人",
     "x_coord": -161.1875,
     "y_coord": 112.390625,
-    "screenshot": ["screenshots/禅宗木杖.jpg","screenshots/气云衫.jpg"],
+    "screenshot": ["screenshots/气云衫.jpg","screenshots/牢大的盾.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -704,7 +704,7 @@
     "id": 40
   },
   {
-    "name": "军需官",
+    "name": "终焉光明旅馆军需官",
     "category_id": 4,
     "description": "售卖：",
     "x_coord": -70.953125,
@@ -833,10 +833,10 @@
   {
     "name": "养鸡人军需官",
     "category_id": 4,
-    "description": "售卖：",
+    "description": "售卖:禅宗木棍 至亲护符",
     "x_coord": -192.0625,
     "y_coord": 158.68372722867687,
-    "screenshot": [],
+    "screenshot": ["screenshots/禅宗木棍.jpg","screenshots/至亲护符.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
