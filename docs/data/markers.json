@@ -508,10 +508,10 @@
   {
     "name": "鲨蜥兽",
     "category_id": 2,
-    "description": "掉落：迦耶伯格 贤者之帽 狂蛮之握",
+    "description": "掉落：迦耶伯格 贤者之帽 狂蛮之握 蜜糖护符",
     "x_coord": -136.28125,
     "y_coord": 89.5,
-    "screenshot": ["screenshots/迦耶伯格.jpg","screenshots/贤者之帽.jpg","screenshots/狂蛮之握.jpg"],
+    "screenshot": ["screenshots/迦耶伯格.jpg","screenshots/贤者之帽.jpg","screenshots/狂蛮之握.jpg","screenshots/蜜糖护符.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
