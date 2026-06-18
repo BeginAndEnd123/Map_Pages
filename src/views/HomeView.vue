@@ -349,7 +349,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .map-page { display: flex; flex: 1; overflow: hidden; }
 
-.map-wrapper { flex: 1; position: relative; background: #000; }
+.map-wrapper { flex: 1; position: relative; z-index: 0; background: #000; }
 
 .loading-mask {
   position: absolute; inset: 0;
