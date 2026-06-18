@@ -652,10 +652,10 @@
   {
     "name": "光耀会商人",
     "category_id": 4,
-    "description": "售卖：禅宗木杖 \n备注：超雄独狼商人",
+    "description": "售卖：禅宗木杖 气云衫 \n备注：超雄独狼商人",
     "x_coord": -161.1875,
     "y_coord": 112.390625,
-    "screenshot": ["screenshots/禅宗木杖.jpg"],
+    "screenshot": ["screenshots/禅宗木杖.jpg","screenshots/气云衫.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
