@@ -591,12 +591,12 @@
     "id": 31
   },
   {
-    "name": "让",
+    "name": "埋藏秘密的骷髅骑士-吉·让德",
     "category_id": 2,
     "description": "掉落：湛光之刺",
     "x_coord": -146.5,
     "y_coord": 172.125,
-    "screenshot": ["screenshots/湛光之刺.jpg"],
+    "screenshot": ["screenshots/monster/埋藏秘密的骷髅骑士-吉·让德.jpg","screenshots/monster/埋藏秘密的骷髅骑士-吉·让德_2.jpg","screenshots/湛光之刺.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
