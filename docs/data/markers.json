@@ -1608,5 +1608,42 @@
     "created_at": "2026-06-19T11:52:13.164Z",
     "submitted_by": null,
     "id": 87
+  },
+  {
+    "name": "逆刀刃影打",
+    "category_id": 3,
+    "description": "飞天御剑专武",
+    "x_coord": -102.8125,
+    "y_coord": 144.375,
+    "screenshot": ["screenshots/逆刀刃影打.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-19T14:32:05.689Z",
+    "submitted_by": null,
+    "id": 88
+  },
+  {
+    "name": "立场剑",
+    "category_id": 3,
+    "description": "游骑兵专武",
+    "x_coord": -45.875,
+    "y_coord": 116.375,
+    "screenshot": ["screenshots/立场剑.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 3,
+    "map_name": "伊雷珂养育间",
+    "status": "approved",
+    "created_at": "2026-06-19T14:34:18.896Z",
+    "submitted_by": null,
+    "id": 89
   }
+
 ]
