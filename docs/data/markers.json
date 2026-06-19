@@ -1503,10 +1503,10 @@
   {
     "name": "金币索姆",
     "category_id": 2,
-    "description": "掉落：矮人的巨人击碎锤",
+    "description": "掉落：矮人的巨人击碎锤 狼学派中甲",
     "x_coord": -162.5625,
     "y_coord": 113.4375,
-    "screenshot": ["screenshots/矮人的巨人击碎锤.jpg"],
+    "screenshot": ["screenshots/矮人的巨人击碎锤.jpg","screenshots/狼学派中甲.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
