@@ -351,12 +351,12 @@
     "region_id": 4,
     "category_id": 2,
     "name": "大树精 巨型幽影诅咒蔓生怪",
-    "description": "掉落：破空裁决",
+    "description": "掉落：断空裁决",
     "x_coord": -49.25,
     "y_coord": 212.19,
     "screenshot": ["screenshots/monster/巨型幽影诅咒蔓生怪.jpg",
                     "screenshots/monster/巨型幽影诅咒蔓生怪_2.jpg",
-                    "screenshots/破空裁决.jpg"],
+                    "screenshots/断空裁决.jpg"],
     "created_at": "2026-06-05T02:54:09",
     "map_name": "幽影诅咒之地",
     "target_region_id": null,
@@ -1571,5 +1571,23 @@
     "created_at": "2026-06-19T10:36:42.667Z",
     "submitted_by": null,
     "id": 0
+  },
+  {
+    "name": "枫叶落红",
+    "category_id": 3,
+    "description": "剑圣为战士子职",
+    "x_coord": -159.1875,
+    "y_coord": 139.140625,
+    "screenshot": ["screenshots/枫叶落红.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-19T11:00:56.917Z",
+    "submitted_by": null,
+    "id": 76
   }
 ]
