@@ -68,7 +68,7 @@ function _onMapClick(e) {
 function initMap() {
   /** 初始化 Leaflet 地图实例，使用 CRS.Simple 坐标系 */
   map = L.map(container.value, {
-    center: [0, 0],
+    center: [-128, 128],
     zoom: 2,
     crs: L.CRS.Simple,
     zoomControl: true,
@@ -89,7 +89,7 @@ function updateTileLayer(url) {
 
 /** 重置地图视图到原点 */
 function resetView() {
-  if (map) map.setView([0, 0], 2, { animate: false })
+  if (map) map.setView([-128, 128], 2, { animate: false })
 }
 
 function updateMarkers() {
