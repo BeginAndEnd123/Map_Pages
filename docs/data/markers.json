@@ -1041,10 +1041,10 @@
   {
     "name": "大地精宝藏额外奖励",
     "category_id": 3,
-    "description": "莎尔雾刃 亡魂哀嚎",
+    "description": "莎尔匕首 亡魂哀嚎",
     "x_coord": -64.375,
     "y_coord": 130.80480765691317,
-    "screenshot": ["screenshots/莎尔雾刃.jpg","screenshots/亡魂哀豪.jpg"],
+    "screenshot": ["screenshots/莎尔匕首.jpg","screenshots/亡魂哀豪.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
