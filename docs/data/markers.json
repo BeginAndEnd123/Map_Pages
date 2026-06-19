@@ -480,7 +480,7 @@
     "region_id": 2,
     "category_id": 2,
     "name": "失控的钢铁卫士",
-    "description": "掉落：肿瘤增生（纳垢专武） 高塔奥秘",
+    "description": "掉落：肿瘤增生（纳垢 帝国游骑兵子职生命受洗者专武） 高塔奥秘",
     "x_coord": -166.48,
     "y_coord": 139.75,
     "screenshot": ["screenshots/monster/失控的钢铁卫士.jpg",
@@ -1630,7 +1630,7 @@
   {
     "name": "力场剑",
     "category_id": 3,
-    "description": "游骑兵专武",
+    "description": "奸奇 游骑兵子职业熵变预知者专武",
     "x_coord": -45.875,
     "y_coord": 116.375,
     "screenshot": ["screenshots/力场剑.png"],
