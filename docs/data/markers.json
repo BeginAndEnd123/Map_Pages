@@ -1612,7 +1612,7 @@
   {
     "name": "逆刀刃影打",
     "category_id": 3,
-    "description": "飞天御剑专武",
+    "description": "完成包围林地任务 赛夫洛给\n飞天御剑专武",
     "x_coord": -102.8125,
     "y_coord": 144.375,
     "screenshot": ["screenshots/逆刀刃影打.jpg"],
@@ -1628,12 +1628,12 @@
     "id": 88
   },
   {
-    "name": "立场剑",
+    "name": "力场剑",
     "category_id": 3,
     "description": "游骑兵专武",
     "x_coord": -45.875,
     "y_coord": 116.375,
-    "screenshot": ["screenshots/立场剑.jpg"],
+    "screenshot": ["screenshots/力场剑.png"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
