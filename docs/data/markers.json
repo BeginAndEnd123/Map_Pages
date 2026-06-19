@@ -1557,10 +1557,10 @@
   {
     "name": "幽影之主",
     "category_id": 2,
-    "description": "掉落：大地之铭-哈格兰亚 埃希斯的灾祸之心\n野生铁男\n备注:实际上在这个位置的下层的机关门后",
+    "description": "掉落：夜陨 大地之铭-哈格兰亚 埃希斯的灾祸之心\n野生铁男\n备注:实际上在这个位置的下层的机关门后",
     "x_coord": -85.375,
     "y_coord": 164.5625,
-    "screenshot": ["screenshots/monster/铁男.png","screenshots/大地之铭-哈格兰亚.jpg","screenshots/埃希斯的灾祸之心.jpg"],
+    "screenshot": ["screenshots/monster/铁男.png","screenshots/夜陨.jpg","screenshots/大地之铭-哈格兰亚.jpg","screenshots/埃希斯的灾祸之心.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
