@@ -12,7 +12,6 @@
       <span v-else-if="marker.status === 'rejected'" class="status-tag rejected">已拒绝</span>
       <span v-if="isGenericWaypoint" class="status-tag waypoint-hint">通用传送点</span>
       <p v-if="marker.description" class="desc">{{ marker.description }}</p>
-      <p class="coords">坐标: ({{ marker.x_coord }}, {{ marker.y_coord }})</p>
       <p v-if="marker.submitter_name" class="submitter">提交者: {{ marker.submitter_name }}</p>
       <div v-if="screenshots.length > 0" class="image-gallery">
         <img v-for="(url, i) in screenshots" :key="i" :src="url" :alt="marker.name + ' 截图'" class="screenshot" @click="enlarged = enlarged === i ? null : i" />
@@ -161,7 +160,6 @@ onBeforeUnmount(() => {
 .status-tag.rejected { background: #5c1a1a; color: #e06060; border: 1px solid #e06060; }
 .status-tag.waypoint-hint { background: #1e3a5c; color: #60a0c0; border: 1px solid #60a0c0; }
 .desc { font-size: 14px; color: var(--text-secondary); margin: 8px 0; line-height: 1.6; white-space: pre-wrap; }
-.coords { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
 .submitter { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 .image-gallery { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .screenshot { width: calc(50% - 3px); height: 80px; object-fit: cover; border-radius: var(--radius-sm); cursor: pointer; border: 1px solid var(--border); }
