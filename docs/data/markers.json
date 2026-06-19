@@ -439,7 +439,7 @@
     "description": "掉落：肿瘤增生 高塔奥秘",
     "x_coord": -166.48,
     "y_coord": 139.75,
-    "screenshot": ["screenshots/肿瘤增生.jpg","screenshots/高塔奥秘.jpg"],
+    "screenshot": ["","screenshots/肿瘤增生.jpg","screenshots/高塔奥秘.jpg"],
     "created_at": "2026-06-15T07:38:19",
     "map_name": "幽暗地域",
     "target_region_id": null,
