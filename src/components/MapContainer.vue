@@ -68,7 +68,7 @@ function _onMapClick(e) {
 function initMap() {
   /** 初始化 Leaflet 地图实例，使用 CRS.Simple 坐标系 */
   map = L.map(container.value, {
-    center: [-128, 128],
+    center: [0, 0],
     zoom: 2,
     crs: L.CRS.Simple,
     zoomControl: true,
