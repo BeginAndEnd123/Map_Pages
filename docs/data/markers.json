@@ -1517,5 +1517,23 @@
     "created_at": "2026-06-19T09:07:32.364Z",
     "submitted_by": null,
     "id": 82
+  },
+  {
+    "name": "超魔の披风",
+    "category_id": 3,
+    "description": "成三披风",
+    "x_coord": -169.625,
+    "y_coord": 37.9375,
+    "screenshot": ["screenshots/超魔の披风.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-19T09:14:41.352Z",
+    "submitted_by": null,
+    "id": 83
   }
 ]
