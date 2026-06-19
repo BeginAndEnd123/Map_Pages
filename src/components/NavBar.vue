@@ -117,12 +117,14 @@ function onLogout() {
 .login-btn:hover { background: var(--gold); color: var(--bg-deep); border-color: var(--gold); }
 .visitor-stats {
   display: inline-flex; align-items: center; gap: 5px;
-  font-size: 11px; color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 15px; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--gold);
   margin-left: 4px; user-select: none;
 }
-.visitor-sep { color: var(--gold-dim); font-size: 13px; }
-.visitor-divider { color: var(--border); }
-.visitor-num { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.visitor-sep { color: var(--gold); }
+.visitor-divider { color: var(--gold-dim); }
+.visitor-num { color: var(--gold-light); font-variant-numeric: tabular-nums; }
 
 @media (max-width: 768px) {
   .navbar { height: 44px; padding: 0 10px; }
