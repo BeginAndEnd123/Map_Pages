@@ -5,6 +5,12 @@
         <span class="menu-icon"></span>
       </button>
       <span class="brand">BG3 地图</span>
+      <span class="visitor-stats">
+        <span class="visitor-sep">&middot;</span>
+        <span class="visitor-item">访问 <span id="busuanzi_value_site_pv" class="visitor-num">-</span></span>
+        <span class="visitor-divider">|</span>
+        <span class="visitor-item">访客 <span id="busuanzi_value_site_uv" class="visitor-num">-</span></span>
+      </span>
     </div>
     <div class="nav-right">
       <template v-if="authStore.user">
@@ -109,11 +115,20 @@ function onLogout() {
   transition: all var(--transition); font-family: var(--font-body);
 }
 .login-btn:hover { background: var(--gold); color: var(--bg-deep); border-color: var(--gold); }
+.visitor-stats {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; color: var(--text-muted);
+  margin-left: 4px; user-select: none;
+}
+.visitor-sep { color: var(--gold-dim); font-size: 13px; }
+.visitor-divider { color: var(--border); }
+.visitor-num { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
 
 @media (max-width: 768px) {
   .navbar { height: 44px; padding: 0 10px; }
   .menu-btn { display: flex; }
   .brand { font-size: 13px; }
+  .visitor-stats { display: none; }
   .pw-input { width: 90px; font-size: 12px; }
   .login-btn, .logout-btn { padding: 4px 10px; font-size: 12px; }
   .user-name { display: none; }
