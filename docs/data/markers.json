@@ -1752,6 +1752,24 @@
     "created_at": "2026-06-20T15:10:33.264Z",
     "submitted_by": null,
     "id": 95
+  },
+  {
+    "name": "混沌邪矛",
+    "category_id": 3,
+    "description": "投掷时额外附带6-120额外暗蚀伤害\n备注:终焉光芒旅店罗兰（酒吧吧台旁醉鬼法师）往北走里面的房间过察觉鉴定-松动的木板内",
+    "x_coord": -62.15625,
+    "y_coord": 118.9375,
+    "screenshot": ["screenshots/混沌邪矛.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-20T15:30:22.210Z",
+    "submitted_by": null,
+    "id": 96
   }
 
 
