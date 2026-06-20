@@ -1159,10 +1159,10 @@
   {
     "name": "复仇侍卫",
     "category_id": 2,
-    "description": "掉落：巴尔血誓 神秘之剑\n备注:精金守卫",
+    "description": "掉落：巴尔血誓 神秘之剑 天外陨铁石（炎铸职业武器材料）\n备注:精金守卫",
     "x_coord": -172.90625,
     "y_coord": 158.875,
-    "screenshot": ["screenshots/巴尔血誓.jpg","screenshots/神秘之剑.jpg"],
+    "screenshot": ["screenshots/巴尔血誓.jpg","screenshots/神秘之剑.jpg","screenshots/天外陨铁石.png"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
