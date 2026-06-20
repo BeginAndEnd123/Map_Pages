@@ -1680,6 +1680,25 @@
     "created_at": "2026-06-20T10:58:10.437Z",
     "submitted_by": null,
     "id": 91
+  },
+  {
+    "name": "树精群 幽影诅咒蔓生怪",
+    "category_id": 2,
+    "description": "掉落：娜姆塔茹之吻",
+    "x_coord": -102.78125,
+    "y_coord": 168.9375,
+    "screenshot": ["screenshots/娜姆塔茹之吻.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-20T11:17:23.351Z",
+    "submitted_by": null,
+    "id": 92
   }
+
 
 ]
