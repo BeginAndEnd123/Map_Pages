@@ -1885,7 +1885,7 @@
     "description": "雷刀",
     "x_coord": -163.3125,
     "y_coord": 97.46875,
-    "screenshot": ["screenshots/雷之刃.jpg"],
+    "screenshot": ["screenshots/雷之刃.png"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
