@@ -1896,6 +1896,24 @@
     "created_at": "2026-06-21T10:04:28.265Z",
     "submitted_by": null,
     "id": 103
+  },
+  {
+    "name": "艾莉瑟拉",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -95.9375,
+    "y_coord": 63.53125,
+    "screenshot": ["screenshots/艾莉瑟拉.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-21T10:26:32.727Z",
+    "submitted_by": null,
+    "id": 104
   }
 
 
