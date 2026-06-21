@@ -1842,6 +1842,24 @@
     "created_at": "2026-06-20T15:51:25.720Z",
     "submitted_by": null,
     "id": 100
+  },
+  {
+    "name": "命运裁决者",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -96.296875,
+    "y_coord": 130.375,
+    "screenshot": ["screenshots/命运裁决者.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-06-21T04:00:31.101Z",
+    "submitted_by": null,
+    "id": 101
   }
 
 
