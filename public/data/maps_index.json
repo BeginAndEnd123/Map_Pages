@@ -240,7 +240,7 @@
       {
         "name": "博德之门",
         "tile_url": "/TileMap/chapter4/博德之门/{z}/{y}/{x}.webp",
-        "max_zoom": 6
+        "max_zoom": 7
       }
     ]
   }
