@@ -1860,6 +1860,42 @@
     "created_at": "2026-06-21T04:00:31.101Z",
     "submitted_by": null,
     "id": 101
+  },
+  {
+    "name": "诸葛连弩",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -170.671875,
+    "y_coord": 97.1875,
+    "screenshot": ["screenshots/诸葛连弩.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-21T10:03:47.323Z",
+    "submitted_by": null,
+    "id": 102
+  },
+  {
+    "name": "雷之刃",
+    "category_id": 3,
+    "description": "雷刀",
+    "x_coord": -163.3125,
+    "y_coord": 97.46875,
+    "screenshot": ["screenshots/雷之刃.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-21T10:04:28.265Z",
+    "submitted_by": null,
+    "id": 103
   }
 
 
