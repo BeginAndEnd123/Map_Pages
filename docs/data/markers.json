@@ -1463,7 +1463,7 @@
     "id": 79
   },
   {
-    "name": "利文顿商人",
+    "name": "利文顿商人 弗格 德罗戈",
     "category_id": 4,
     "description": "售卖：光之巨人の光剑（光巨，光刀） 塞伦涅的拥抱 灵魂挽歌 鞭刑杖",
     "x_coord": -168.109375,
@@ -1914,6 +1914,24 @@
     "created_at": "2026-06-21T10:26:32.727Z",
     "submitted_by": null,
     "id": 104
+  },
+  {
+    "name": "修道院商人 夜曲",
+    "category_id": 4,
+    "description": "售卖：神钢铠甲",
+    "x_coord": -150.6328125,
+    "y_coord": 169.9765625,
+    "screenshot": ["screenshots/神钢铠甲.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 5,
+    "map_name": "博德之门",
+    "status": "approved",
+    "created_at": "2026-06-22T06:29:08.912Z",
+    "submitted_by": null,
+    "id": 105
   }
 
 
