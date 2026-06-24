@@ -1950,6 +1950,24 @@
     "created_at": "2026-06-22T06:36:00.614Z",
     "submitted_by": null,
     "id": 106
+  },
+    {
+    "name": "黑缕盾牌",
+    "category_id": 3,
+    "description": "月德装备",
+    "x_coord": -180.84375,
+    "y_coord": 128.171875,
+    "screenshot": ["screenshots/黑缕盾牌.png"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-06-24T15:25:55.231Z",
+    "submitted_by": null,
+    "id": 107
   }
 
 
