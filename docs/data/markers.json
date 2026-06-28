@@ -210,7 +210,7 @@
     "description": "掉落:天外陨铁石（炎铸职业武器材料） 理塘之心",
     "x_coord": -89.58,
     "y_coord": 115.02,
-    "screenshot": ["screenshots/天外陨铁石.jpg"],
+    "screenshot": ["screenshots/天外陨铁石.jpg", "screenshots/理塘之心.png"],
     "created_at": "2026-06-04T10:10:18",
     "map_name": "鹦鹉螺坠毁区域",
     "target_region_id": null,
@@ -519,7 +519,7 @@
   {
     "name": "眼魔",
     "category_id": 2,
-    "description": "掉落：悼霜碎片",
+    "description": "悼霜碎片（它石化的卓尔身上）",
     "x_coord": -157.0625,
     "y_coord": 160.8125,
     "screenshot": ["screenshots/悼霜-至臻.jpg"],
@@ -1968,6 +1968,42 @@
     "created_at": "2026-06-24T15:25:55.231Z",
     "submitted_by": null,
     "id": 107
+  },
+  {
+    "name": "悼霜碎片",
+    "category_id": 3,
+    "description": "完成瘦蕈人王的任务获取",
+    "x_coord": -79.53125,
+    "y_coord": 129.5,
+    "screenshot": ["screenshots/悼霜-至臻.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-28T14:15:50.046Z",
+    "submitted_by": null,
+    "id": 82
+  },
+  {
+    "name": "菲尔罗",
+    "category_id": 2,
+    "description": "掉落：悼霜碎片",
+    "x_coord": -117.875,
+    "y_coord": 83.25,
+    "screenshot": ["screenshots/悼霜-至臻.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-06-28T14:16:53.986Z",
+    "submitted_by": null,
+    "id": 83
   }
 
 
