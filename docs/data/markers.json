@@ -1825,24 +1825,7 @@
     "submitted_by": null,
     "id": 99
   },
-  {
-    "name": "测试2",
-    "category_id": 3,
-    "description": "",
-    "x_coord": -169.53125,
-    "y_coord": 156.8125,
-    "screenshot": [],
-    "target_region_id": null,
-    "target_map_name": "",
-    "target_x": null,
-    "target_y": null,
-    "region_id": 5,
-    "map_name": "博德之门",
-    "status": "approved",
-    "created_at": "2026-06-20T15:51:25.720Z",
-    "submitted_by": null,
-    "id": 100
-  },
+  
   {
     "name": "命运裁决者",
     "category_id": 3,
@@ -1985,7 +1968,7 @@
     "status": "approved",
     "created_at": "2026-06-28T14:15:50.046Z",
     "submitted_by": null,
-    "id": 82
+    "id": 108
   },
   {
     "name": "菲尔罗",
@@ -2003,7 +1986,7 @@
     "status": "approved",
     "created_at": "2026-06-28T14:16:53.986Z",
     "submitted_by": null,
-    "id": 83
+    "id": 109
   }
 
 
