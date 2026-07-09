@@ -720,10 +720,10 @@
   {
     "name": "调查兵团",
     "category_id": 2,
-    "description": "掉落：无\n额外怪物",
+    "description": "掉落：花剑\n额外怪物",
     "x_coord": -114.1875,
     "y_coord": 111.5,
-    "screenshot": [],
+    "screenshot": ["screenshots/花剑.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
