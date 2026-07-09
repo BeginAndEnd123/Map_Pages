@@ -1987,6 +1987,24 @@
     "created_at": "2026-06-28T14:16:53.986Z",
     "submitted_by": null,
     "id": 109
+  },
+  {
+    "name": "陨铁盾牌",
+    "category_id": 3,
+    "description": "猎魔人盾牌\n火琥珀点炉子，陨铁+女祭司的盾牌合成",
+    "x_coord": -135.0625,
+    "y_coord": 186.11809303927032,
+    "screenshot": ["screenshots/陨铁盾牌.png"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "低语深地",
+    "status": "approved",
+    "created_at": "2026-07-09T14:25:23.899Z",
+    "submitted_by": null,
+    "id": 110
   }
 
 
