@@ -2012,7 +2012,7 @@
     "description": "光刀\n获取洛山达之血同时获取",
     "x_coord": -119,
     "y_coord": 74.61055483664612,
-    "screenshot": [],
+    "screenshot": ["screenshots/天丛云之剑.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
