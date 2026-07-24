@@ -2030,7 +2030,7 @@
     "description": "荒野形态装备",
     "x_coord": -131.890625,
     "y_coord": 150.26508183836984,
-    "screenshot": [],
+    "screenshot": ["screenshots/垂藤草籽.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
