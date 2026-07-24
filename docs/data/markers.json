@@ -2023,6 +2023,24 @@
     "created_at": "2026-07-19T09:34:00.124Z",
     "submitted_by": null,
     "id": 111
+  },
+  {
+    "name": "垂藤草籽",
+    "category_id": 3,
+    "description": "荒野形态装备",
+    "x_coord": -131.890625,
+    "y_coord": 150.26508183836984,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-07-24T14:56:30.782Z",
+    "submitted_by": null,
+    "id": 112
   }
 
 
