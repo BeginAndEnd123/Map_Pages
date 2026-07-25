@@ -2041,6 +2041,24 @@
     "created_at": "2026-07-24T14:56:30.782Z",
     "submitted_by": null,
     "id": 112
+  },
+  {
+    "name": "卡利亚魔法剑",
+    "category_id": 3,
+    "description": "获取照明灯时同步获取\n卡利亚骑士专武",
+    "x_coord": -173.125,
+    "y_coord": 90.25059821179539,
+    "screenshot": ["screenshots/卡利亚魔法剑.jpg"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-07-25T16:16:07.015Z",
+    "submitted_by": null,
+    "id": 113
   }
 
 
