@@ -888,10 +888,10 @@
   {
     "name": "养鸡人军需官",
     "category_id": 4,
-    "description": "售卖:禅宗木杖（敏棍） 至亲护符",
+    "description": "售卖:禅宗木杖 至亲护符",
     "x_coord": -192.0625,
     "y_coord": 158.68372722867687,
-    "screenshot": ["screenshots/禅宗木杖.png","screenshots/至亲护符.jpg"],
+    "screenshot": ["screenshots/禅宗木棍.png","screenshots/至亲护符.jpg"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
