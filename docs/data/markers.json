@@ -849,7 +849,7 @@
   {
     "name": "戴摩(第一章)",
     "category_id": 4,
-    "description": "售卖：回刺飞刃 防爆盾牌",
+    "description": "售卖：回刺飞刃 防爆盾牌（需要到达一定等级）",
     "x_coord": -97.265625,
     "y_coord": 147.53125,
     "screenshot": ["screenshots/回刺飞刃.jpg","screenshots/防爆盾牌.jpg"],
