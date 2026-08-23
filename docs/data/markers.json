@@ -2086,7 +2086,8 @@
     "description": "掉落：疾风之刃 圣者秘银铠（牧师甲） 巨剑 风吟者",
     "x_coord": -156.328125,
     "y_coord": 124.015625,
-    "screenshot": ["screenshots/疾风之刃.png",
+    "screenshot": ["screenshots/monster/光之鹰.png",
+                    "screenshots/疾风之刃.png",
                     "screenshots/圣者秘银铠.png",
                     "screenshots/巨剑.png",
                     "screenshots/风吟者.jpg"],
@@ -2104,7 +2105,7 @@
   {
     "name": "酒馆索姆",
     "category_id": 2,
-    "description": "废弃物之夜",
+    "description": "掉落：废弃物之夜",
     "x_coord": -160.875,
     "y_coord": 61.9375,
     "screenshot": ["screenshots/废弃物之夜.png"],
