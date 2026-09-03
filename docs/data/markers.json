@@ -2105,7 +2105,7 @@
   {
     "name": "酒馆索姆",
     "category_id": 2,
-    "description": "掉落：废弃物之夜",
+    "description": "掉落：\n废弃物之夜(其实在索姆身后的密室里，但是具体在哪我不知道)",
     "x_coord": -160.875,
     "y_coord": 61.9375,
     "screenshot": ["screenshots/废弃物之夜.png"],
