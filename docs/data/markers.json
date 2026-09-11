@@ -2126,7 +2126,7 @@
     "description": "",
     "x_coord": -126.6875,
     "y_coord": 154.125,
-    "screenshot": [],
+    "screenshot": ["screenshots/板砖.png"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
