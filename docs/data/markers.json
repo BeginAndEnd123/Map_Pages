@@ -2119,6 +2119,24 @@
     "created_at": "2026-08-23T04:40:45.599Z",
     "submitted_by": null,
     "id": 116
+  },
+  {
+    "name": "板砖",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -126.6875,
+    "y_coord": 154.125,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "卧室",
+    "status": "approved",
+    "created_at": "2026-09-11T14:20:52.414Z",
+    "submitted_by": null,
+    "id": 117
   }
    
 
