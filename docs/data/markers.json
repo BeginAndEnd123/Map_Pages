@@ -2195,7 +2195,7 @@
   {
     "name": "元素聚合",
     "category_id": 3,
-    "description": "元素双导师学位",
+    "description": "元素双导师学位\n前置完成阿拉贝尔的任务（找父母任务）才会在箱子里刷新",
     "x_coord": -70.9375,
     "y_coord": 91.953125,
     "screenshot": ["screenshots/元素聚合.png","screenshots/元素聚合2.png"],
