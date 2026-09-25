@@ -2173,6 +2173,24 @@
     "created_at": "2026-09-25T07:36:11.604Z",
     "submitted_by": null,
     "id": 119
+  },
+  {
+    "name": "板砖2号机",
+    "category_id": 3,
+    "description": "",
+    "x_coord": -123.90625,
+    "y_coord": 103.21875,
+    "screenshot": ["screenshots/板砖.png"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-09-25T07:49:03.210Z",
+    "submitted_by": null,
+    "id": 117
   }
    
 
