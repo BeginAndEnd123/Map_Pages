@@ -2190,7 +2190,25 @@
     "status": "approved",
     "created_at": "2026-09-25T07:49:03.210Z",
     "submitted_by": null,
-    "id": 117
+    "id": 120
+  },
+  {
+    "name": "元素聚合",
+    "category_id": 3,
+    "description": "元素双导师学位",
+    "x_coord": -70.9375,
+    "y_coord": 91.953125,
+    "screenshot": ["screenshots/元素聚合.png","screenshots/元素聚合2.png"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 4,
+    "map_name": "幽影诅咒之地",
+    "status": "approved",
+    "created_at": "2026-09-25T08:00:23.982Z",
+    "submitted_by": null,
+    "id": 121
   }
    
 
