@@ -31,7 +31,7 @@
     "region_id": 2,
     "category_id": 2,
     "name": "谜语人",
-    "description": "\n掉落:巨阙（实际附伤为1d4*力调） 巴洛炎魔的火焰披风（火球术披风）\n备注:超雄独狼\n额外怪物",
+    "description": "\n掉落:巨阙（实际附伤为1d4*力调） 巴洛炎魔的火焰披风（火球术披风） 猎魔人手套\n备注:超雄独狼\n额外怪物",
     "x_coord": -141.03,
     "y_coord": 143.69,
     "screenshot": ["screenshots/monster/谜语人.jpg",
