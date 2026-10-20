@@ -2263,6 +2263,24 @@
     "created_at": "2026-10-08T13:07:01.958Z",
     "submitted_by": null,
     "id": 124
+  },
+  {
+    "name": "养鸡人审判官",
+    "category_id": 2,
+    "description": "推荐挑战等级：10\n",
+    "x_coord": -46.25,
+    "y_coord": 134.4375,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 3,
+    "map_name": "伊雷珂养育间",
+    "status": "approved",
+    "created_at": "2026-10-20T07:54:24.787Z",
+    "submitted_by": null,
+    "id": 125
   }
    
 
