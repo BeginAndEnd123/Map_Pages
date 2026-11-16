@@ -2282,6 +2282,24 @@
     "created_at": "2026-10-20T07:54:24.787Z",
     "submitted_by": null,
     "id": 125
+  },
+  {
+    "name": "凡人之韧",
+    "category_id": 3,
+    "description": "气点头盔",
+    "x_coord": -126.265625,
+    "y_coord": 144.21875,
+    "screenshot": [],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "幽暗地域",
+    "status": "approved",
+    "created_at": "2026-11-16T16:04:56.324Z",
+    "submitted_by": null,
+    "id": 126
   }
    
 
