@@ -2302,12 +2302,12 @@
     "id": 126
   },
   {
-    "name": "红宝石剑",
+    "name": "宝石剑",
     "category_id": 3,
     "description": "",
     "x_coord": -110.71875,
     "y_coord": 121.46875,
-    "screenshot": [],
+    "screenshot": ["screenshots/宝石剑.png"],
     "target_region_id": null,
     "target_map_name": "",
     "target_x": null,
@@ -2318,6 +2318,24 @@
     "created_at": "2026-11-21T07:27:57.838Z",
     "submitted_by": null,
     "id": 127
+  },
+   {
+    "name": "百衲衣",
+    "category_id": 3,
+    "description": "击杀不死生物概率掉落",
+    "x_coord": -149.75,
+    "y_coord": 161,
+    "screenshot": ["screenshots/百衲衣.png"],
+    "target_region_id": null,
+    "target_map_name": "",
+    "target_x": null,
+    "target_y": null,
+    "region_id": 2,
+    "map_name": "鹦鹉螺坠毁区域",
+    "status": "approved",
+    "created_at": "2026-11-21T10:52:34.439Z",
+    "submitted_by": null,
+    "id": 128
   }
    
 
